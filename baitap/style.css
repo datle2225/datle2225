@@ -1,3 +1,24 @@
+
+a {
+    padding-left: 8px;
+    height: 27px;
+    line-height: 27px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.lzd-site-menu-sub a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+    width: 172px;
+    font-family: Roboto-Regular;
+    font-size: 13px;
+    line-height: 27px;
+    cursor: pointer;
+}
+
 li, ol, ul {
     list-style: none;
 }
@@ -9,26 +30,89 @@ ul {
     margin: 0;
 }
 
+
 li {
     display: block;
     white-space: nowrap;
-    width: 172px;
+    width: 180px;
     font-family: Roboto-Regular;
     font-size: 12px;
     line-height: 27px;
     color: #757575;
     cursor: pointer;
     box-sizing: content-box;
-}
-
-a {
-    padding-left: 8px;
     height: 27px;
-    line-height: 27px;
-    text-decoration: none;
 }
 
 li:hover {
     background: #eceff1;
     color: #f36d00;
+}
+
+li.lzd-site-menu-grand-item:hover {
+    background: none;
+}
+
+li.arrow:hover::after{
+    float: right;
+    content: ">";
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+}
+
+.lzd-site-nav-menu-dropdown {
+    width: 185px;
+    height: 344px;
+    position: absolute;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
+    background-color: #fff;
+    z-index: 200;
+    box-sizing: border-box
+}
+
+.menu-root-item1:hover .Level_1_Category_No1, .menu-root-item2:hover .Level_1_Category_No2{
+    visibility: visible
+}
+
+.lzd-site-menu-sub{
+    height: 324px;
+    visibility: hidden;
+    position: absolute;
+    width: 190px;
+    list-style: none;
+    margin: 0;
+    left: 180px;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.25);
+}
+
+.lzd-site-menu-grand {
+    height: 324px;
+    visibility: hidden;
+    position: absolute;
+    width: 190px;
+    list-style: none;
+    margin: 0;
+    left: 190px;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.25);
+}
+
+.lzd-site-menu-sub li {
+    width: 190px;
+}
+
+.sub_item_laptop:hover .grand_item_laptop, .sub_item_maytinh:hover .grand_item_maytinh,
+.sub_item_amthanh:hover .grand_item_amthanh, .sub_item_camera:hover .grand_item_camera,
+.sub_item_mayanh:hover .grand_item_mayanh, .sub_item_mayquay:hover .grand_item_mayquay,
+.sub_item_mayin:hover .grand_item_mayin, .sub_item_dongho:hover .grand_item_dongho,
+.sub_item_maychoigame:hover .grand_item_maychoigame, .sub_item_phukiendidong:hover .grand_item_phukiendidong,
+.sub_item_thiebithongminh:hover .grand_item_thiebithongminh, .sub_item_thiebiso:hover .grand_item_thiebiso,
+.sub_item_phukienmayanh:hover .grand_item_phukienmayanh, .sub_item_phukienmaybay:hover .grand_item_phukienmaybay,
+.sub_item_luutru:hover .grand_item_luutru, .sub_item_phukienmaytinh:hover .grand_item_phukienmaytinh
+
+{
+    visibility: visible
 }
