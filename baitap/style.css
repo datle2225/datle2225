@@ -70,7 +70,13 @@ li.arrow:hover::after{
     box-sizing: border-box
 }
 
-.menu-root-item1:hover .Level_1_Category_No1, .menu-root-item2:hover .Level_1_Category_No2{
+.menu-root-item1:hover .Level_1_Category_No1, .menu-root-item2:hover .Level_1_Category_No2,
+.menu-root-item3:hover .Level_1_Category_No3, .menu-root-item4:hover .Level_1_Category_No4,
+.menu-root-item5:hover .Level_1_Category_No5, .menu-root-item6:hover .Level_1_Category_No6,
+.menu-root-item7:hover .Level_1_Category_No7, .menu-root-item8:hover .Level_1_Category_No8,
+.menu-root-item9:hover .Level_1_Category_No9, .menu-root-item10:hover .Level_1_Category_No10,
+.menu-root-item11:hover .Level_1_Category_No11, .menu-root-item12:hover .Level_1_Category_No12
+{
     visibility: visible
 }
 
@@ -111,8 +117,56 @@ li.arrow:hover::after{
 .sub_item_maychoigame:hover .grand_item_maychoigame, .sub_item_phukiendidong:hover .grand_item_phukiendidong,
 .sub_item_thiebithongminh:hover .grand_item_thiebithongminh, .sub_item_thiebiso:hover .grand_item_thiebiso,
 .sub_item_phukienmayanh:hover .grand_item_phukienmayanh, .sub_item_phukienmaybay:hover .grand_item_phukienmaybay,
-.sub_item_luutru:hover .grand_item_luutru, .sub_item_phukienmaytinh:hover .grand_item_phukienmaytinh
-
+.sub_item_luutru:hover .grand_item_luutru, .sub_item_phukienmaytinh:hover .grand_item_phukienmaytinh,
+.sub_item_linhkienmaytinh:hover .grand_item_linhkienmaytinh, .sub_item_phukienongkinh:hover .grand_item_phukienongkinh,
+.sub_item_thietbimang:hover .grand_item_thietbimang, .sub_item_phukienmaychoigame:hover .grand_item_phukienmaychoigame,
+.sub_item_tivivideos:hover .grand_item_tivivideos, .sub_item_diengiadungnho:hover .grand_item_diengiadungnho,
+.sub_item_diengiadunglon:hover .grand_item_diengiadunglon, .sub_item_chamsocda:hover .grand_item_chamsocda,
+.sub_item_trangdiem:hover .grand_item_trangdiem, .sub_item_dungculamdep:hover .grand_item_dungculamdep,
+.sub_item_chamsoccothe:hover .grand_item_chamsoccothe, .sub_item_chamsoctoc:hover .grand_item_chamsoctoc,
+.sub_item_chamsoccanhan:hover .grand_item_chamsoccanhan, .sub_item_danhchonamgioi:hover .grand_item_danhchonamgioi,
+.sub_item_nuochoa:hover .grand_item_nuochoa, .sub_item_thucphamchucnang:hover .grand_item_thucphamchucnang,
+.sub_item_thucphamchosacdep:hover .grand_item_thucphamchosacdep, .sub_item_suckhoetinhduc:hover .grand_item_suckhoetinhduc,
+.sub_item_thietbiyte:hover .grand_item_thietbiyte, .sub_item_chamsoctre:hover .grand_item_chamsoctre,
+.sub_item_busuaandam:hover .grand_item_busuaandam, .sub_item_quanaophukien:hover .grand_item_quanaophukien,
+.sub_item_dungcuvesinh:hover .grand_item_dungcuvesinh, .sub_item_tamvachamsoccothe:hover .grand_item_tamvachamsoccothe,
+.sub_item_xeghediunoi:hover .grand_item_xeghediunoi, .sub_item_dochoisosinh:hover .grand_item_dochoisosinh,
+.sub_item_nhanvatdochoi:hover .grand_item_nhanvatdochoi, .sub_item_dochoingoaitroi:hover .grand_item_dochoingoaitroi,
+.sub_item_xedieukhientuxa:hover .grand_item_xedieukhientuxa, .sub_item_doansang:hover .grand_item_doansang,
+.sub_item_thucphamkhodonghop:hover .grand_item_thucphamkhodonghop, .sub_item_douong:hover .grand_item_douong,
+.sub_item_douongcocon:hover .grand_item_douongcocon, .sub_item_giatui:hover .grand_item_giatui,
+.sub_item_keosocola:hover .grand_item_keosocola, .sub_item_phukienhutthuoc:hover .grand_item_phukienhutthuoc,
+.sub_item_snackdoanvat:hover .grand_item_snackdoanvat, .sub_item_chamsocthucung:hover .grand_item_chamsocthucung,
+.sub_item_bep:hover .grand_item_bep, .sub_item_suachuanhacua:hover .grand_item_suachuanhacua,
+.sub_item_dungcudien:hover .grand_item_dungcudien, .sub_item_dungcucamtay:hover .grand_item_dungcucamtay,
+.sub_item_phongngu:hover .grand_item_phongngu, .sub_item_phongtam:hover .grand_item_phongtam,
+.sub_item_thietbiden:hover .grand_item_thietbiden, .sub_item_trangtrinhcua:hover .grand_item_trangtrinhcua,
+.sub_item_donoithat:hover .grand_item_donoithat, .sub_item_vanphongpham:hover .grand_item_vanphongpham,
+.sub_item_sach:hover .grand_item_sach, .sub_item_nhaccu:hover .grand_item_nhaccu,
+.sub_item_quanvachanvay:hover .grand_item_quanvachanvay, .sub_item_aonu:hover .grand_item_aonu,
+.sub_item_dongunoiy:hover .grand_item_dongunoiy, .sub_item_phukiennu:hover .grand_item_phukiennu,
+.sub_item_giaynu:hover .grand_item_giaynu, .sub_item_trangphucbegai:hover .grand_item_trangphucbegai,
+.sub_item_giaybegai:hover .grand_item_giaybegai, .sub_item_trangphucnam:hover .grand_item_trangphucnam,
+.sub_item_giaydepnam:hover .grand_item_giaydepnam, .sub_item_dolotnam:hover .grand_item_dolotnam,
+.sub_item_phukientthoitrangnam:hover .grand_item_phukientthoitrangnam, .sub_item_trangphucbetrai:hover .grand_item_trangphucbetrai,
+.sub_item_giaybetrai:hover .grand_item_giaybetrai, .sub_item_donghonu:hover .grand_item_donghonu,
+.sub_item_trangsucnu:hover .grand_item_trangsucnu, .sub_item_kinhmat:hover .grand_item_kinhmat,
+.sub_item_kinhthoitrang:hover .grand_item_kinhthoitrang, .sub_item_tuixachnu:hover .grand_item_tuixachnu,
+.sub_item_donghonam:hover .grand_item_donghonam, .sub_item_trangsucnam:hover .grand_item_trangsucnam,
+.sub_item_tuixachnam:hover .grand_item_tuixachnam, .sub_item_tuideocheonam:hover .grand_item_tuideocheonam,
+.sub_item_tuidulich:hover .grand_item_tuidulich, .sub_item_tuitreem:hover .grand_item_tuitreem,
+.sub_item_valituidulich:hover .grand_item_valituidulich, .sub_item_thethaothehinh:hover .grand_item_thethaothehinh,
+.sub_item_hoatdongdangoai:hover .grand_item_hoatdongdangoai, .sub_item_thethaotrangphucnam:hover .grand_item_thethaotrangphucnam,
+.sub_item_giaythethaonam:hover .grand_item_giaythethaonam, .sub_item_trangphuccuaphunu:hover .grand_item_trangphuccuaphunu,
+.sub_item_giaythethaonu:hover .grand_item_giaythethaonu, .sub_item_thethaodungvot:hover .grand_item_thethaodungvot,
+.sub_item_thethaodongdoi:hover .grand_item_thethaodongdoi, .sub_item_damboc:hover .grand_item_damboc,
+.sub_item_thethaoduoinuoc:hover .grand_item_thethaoduoinuoc, .sub_item_phukienthethao:hover .grand_item_phukienthethao,
+.sub_item_xemay:hover .grand_item_xemay, .sub_item_chamsocoto:hover .grand_item_chamsocoto,
+.sub_item_trangtrinoithatoto:hover .grand_item_trangtrinoithatoto, .sub_item_trangtringoaithatoto:hover .grand_item_trangtringoaithatoto,
+.sub_item_phutungoto:hover .grand_item_phutungoto, .sub_item_dodientuoto:hover .grand_item_dodientuoto,
+.sub_item_daunhototo:hover .grand_item_daunhototo, .sub_item_phutungxemay:hover .grand_item_phutungxemay,
+.sub_item_dobaohoxemay:hover .grand_item_dobaohoxemay, .sub_item_phukienxemay:hover .grand_item_phukienxemay,
+.sub_item_daunhotxemay:hover .grand_item_daunhotxemay, .sub_item_voruotbanhxemay:hover .grand_item_voruotbanhxemay
 {
     visibility: visible
 }
