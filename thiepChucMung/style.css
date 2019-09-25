@@ -190,7 +190,7 @@ html, body {
   visibility: hidden;
 }
 
-.cake:hover .candle .flame, .cake:hover ~ .loiChuc {
+.cake:hover .candle .flame, .cake:hover ~ .loiChuc, .cake:hover ~ .balloon {
   visibility: visible;
 }
 
@@ -201,4 +201,75 @@ html, body {
 
 .cake:hover ~ .background {
   background-color: rgb(111, 112, 112);
+}
+
+.balloon {
+  visibility: hidden;
+  position: absolute;
+  top: 2%;
+  height: 30%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.balloon div {
+  margin: 0 10px;
+}
+
+.balloon img {
+  max-width: 80px;
+  margin: 2%;
+}
+
+.purple {
+  animation: balloon1 4s ease-in-out alternate infinite;
+}
+
+.blue {
+  animation: balloon2 5s ease-in-out alternate infinite;
+}
+
+.green {
+  animation: balloon3 5s ease-in-out alternate infinite;
+}
+
+.pink {
+  animation: balloon4 4s ease-in-out infinite;
+}
+
+@keyframes balloon1 {
+  0%, 100% {
+      transform: translateY(0) rotate(-6deg);
+  }
+  50% {
+      transform: translateY(-10px) rotate(8deg);
+  }
+}
+
+@keyframes balloon2 {
+  0%, 100% {
+      transform: translate(10px, -10px) rotate(4deg);
+  }
+  50% {
+      transform: translate(-10px, 5px) rotate(-6deg);
+  }
+}
+
+@keyframes balloon3 {
+  0%, 100% {
+      transform: translate(-10px, 8px) rotate(6deg);
+  }
+  50% {
+      transform: translate(10px, -10px) rotate(10deg);
+  }
+}
+
+@keyframes balloon4 {
+  0%, 100% {
+      transform: translate(0, -10px) rotate(4deg);
+  }
+  50% {
+      transform: translate(-20px, 5px) rotate(-6deg);
+  }
 }
