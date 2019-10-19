@@ -199,6 +199,10 @@ body {
         color: #F6F4F5;
         font-size: 50px;
     }
-    .congratulations div {
+    .congratulations * {
         padding: 20px;
+    }
+
+    .congratulations img {
+        max-width: 150px;
     }
