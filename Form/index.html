@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Đăng ký ngay!</div>
+        <form action="">
+            <div class="form">
+                <input type="text" name="firstName" placeholder="Họ" >
+                <input type="text" name="lastName" placeholder="Tên">
+                <input type="text" name="email" placeholder="Email">
+                <div class="warn email"></div>
+                <input type="text" name="username" placeholder="Tên người dùng">
+                <div class="warn username"></div>
+                <input type="password" name="password" placeholder="Mật khẩu">
+                <input type="password" name="confirm" placeholder="Xác nhận">
+                <div class="warn password">Mật khẩu phải có ít nhất 8 ký tự bao gồm cả chữ và số</div>
+            </div> <br>
+            <input type="submit" value="OK">
+        </form>
+        <div class="logo">
+            <img src="static/logodat2.png" alt="logo">
+            <div name="hello">Cứ đăng ký đã, xem ra gì nào...</div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

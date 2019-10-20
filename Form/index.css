@@ -1,0 +1,97 @@
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Baloo Bhai', cursive;
+    color: #393D46;
+    background-color: #F6F4F5;
+    font-size: 18px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 350px 250px;
+    border: 2px solid #393D46;
+    border-radius: 50px;
+    height: auto;
+    padding: 5% 20px;
+}
+
+.title {
+    grid-column: -1 / 1;
+    text-align: center;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-gap: 10px;
+    align-self: flex-start;
+}
+
+.warn {
+    font-size: 15px;
+    grid-column: -1 / 1;
+    color: #F13E4B;
+}
+
+.warn.email, .warn.username {
+    display: none;
+}
+
+.warning {
+    border: 3px solid #F13E4B;
+}
+
+.accept {
+    border: 3px solid #B2D430 !important;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-width: 120px;
+}
+
+.logo > div {
+    padding-top: 20px;
+}
+
+[name="username"], [name="email"] {
+    grid-column: -1 / 1;
+}
+
+input {
+    border: 3px solid #393D46;
+    font-size: 16px;
+    outline: none;
+}
+
+input:not([type="submit"]) {
+    height: 30px;
+    padding-left: 4px;
+    background-color: #F6F4F5;
+}
+
+[type="submit"] {
+    align-self: flex-start;
+    font-family: 'Baloo Bhai', cursive;
+    color: #393D46;
+    background-color: #B2D430;
+    width: 50px;
+}
