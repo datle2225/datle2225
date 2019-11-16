@@ -1,0 +1,92 @@
+/* .contain {
+  overflow: hidden;
+  border: 1px solid red;
+}
+
+.contain .slider {
+  height: 300px;
+  width: 100%;
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .contain .slider.rightToCenterClass {
+  animation: 2s rightToCenterSlider;
+}
+
+.contain .slider.leftToCenterClass {
+  animation: 2s leftToCenterSlider;
+}
+
+.contain .slider.centerToLeftClass {
+  animation: 2s centerToLeftSlider;
+}
+
+.contain .slider.centerToRightClass {
+  animation: 2s centerToRightSlider;
+} */
+
+/* @keyframes rightToCenterSlider {
+  100% { 
+    transform: translateX(-66.6666%);  
+  }
+}
+
+@keyframes leftToCenterSlider {
+  0% { right: 100%; }
+	100% { right: 0; }
+}
+
+@keyframes centerToLeftSlider {
+  0% { right: 0; }
+	100% { right: 100%; }
+}
+
+@keyframes centerToRightSlider {
+  0% { left: 0; }
+	100% { left: 100%; }
+} */
+
+
+#slider {
+	overflow: hidden;
+}
+
+@keyframes slider {
+  0% { 
+    left: 0;  
+  }
+  8.33333333333% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  41.6666666667% {
+    left: -100%;
+  }
+  58.3333333333% {
+    left: -200%;
+  }
+  75% {
+    left: -200%;
+  }
+  91.6666666667% {
+    left: -300%;
+  }
+  100% { 
+    left: -300%;
+  }
+}
+#slider div {
+	width:400%;
+	position: relative;
+	animation: 9s slider linear infinite;
+}
+
+#slider div img {
+	width: 25%;
+	float: left;
+}
