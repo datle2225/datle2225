@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Carousel</title>
+    <script src="https://kit.fontawesome.com/6e2c78e5bf.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="index.css">
 </head>
@@ -18,17 +19,35 @@
         </span>
     </div> -->
 
-    <div id="slider">
-            <div>
-                  <img src="https://c2.staticflickr.com/4/3743/8760292213_501dea0d6d_b.jpg">
-                  <img src="http://orig05.deviantart.net/4f25/f/2014/116/e/d/surprise_kiss__made_for_my_boyfriend__by_thekrisspybacon-d7g2gz9.png">
-                  <img src="https://c2.staticflickr.com/8/7033/6751442355_83cfe78752_b.jpg">
-                  <img src="https://c2.staticflickr.com/4/3743/8760292213_501dea0d6d_b.jpg">
+    <div class="contain">
+        <div class="buttonAllow">
+            <div class="button prev">
+                <i class="fas fa-chevron-left"></i>
             </div>
-      </div>
+        </div>
+        <div class=sliderContain>
+            <div class="slider">
+                    <img src="static/cat1.png" alt="cat1">
+                    <img src="static/cat2.png" alt="cat2">
+                    <img src="static/cat3.png" alt="cat3">
+                    <img src="static/cat1.png" alt="cat1">
+            </div>
+        </div>
+        <div class="buttonAllow">
+            <div class="button next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
 
     
-    <!-- <script src="jquery-3.4.1.slim.min.js"></script>
-    <script src="index.js"></script> -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
