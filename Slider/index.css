@@ -15,12 +15,13 @@
 
 .sliderContain .slider img {
 	width: 25%;
-	float: left;
+  float: left;
+  flex-grow: 1;
 }
 
 .buttonAllow {
   cursor: pointer;
-  margin: auto 50px;
+  padding: 0px 30px;
 }
 
 .button {
@@ -39,12 +40,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 25px;
 }
 
 .page div {
   cursor: pointer;
-  margin: 50px 50px 0px 0px;
+  margin: 20px 20px;
   font-size: 20px;
   background: black;
   color: white;
