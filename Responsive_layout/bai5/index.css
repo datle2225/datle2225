@@ -1,0 +1,52 @@
+body, html{
+    margin:0;
+    padding:0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img1 {
+    width: 90px;
+    height: 30px;
+    background: blue;
+}
+
+.img2 {
+    background: blue;
+    margin: 15px;
+    height: 200px;
+    flex-grow: 1;
+}
+
+@media (max-width: 568px) {
+    body {
+        background: red;
+    }
+
+    .img1 {
+        width: 60px;
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .img2 {
+        margin: 0 15px 15px 15px;
+    }
+
+}

@@ -1,0 +1,53 @@
+body, html{
+    margin:0;
+    padding:0;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    grid-gap: 15px;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.img1 {
+    width: 90px;
+    height: 30px;
+    background: blue;
+}
+
+.last {
+    grid-column-start: -1;
+}
+
+.img2 {
+    background: blue;
+    margin: 15px;
+    height: 800px;
+}
+
+@media (max-width: 568px) {
+    body {
+        background: red;
+    }
+
+    .header {
+        grid-template-columns: auto auto auto;
+    }
+
+    .img1 {
+        width: 60px;
+    }
+
+    .last {
+        grid-column-start: 3;
+    }
+
+    .img2 {
+        background: blue;
+        margin: 0px 15px 15px 15px;
+        height: 800px;
+    }
+
+}

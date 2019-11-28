@@ -1,0 +1,55 @@
+body, html{
+    margin:0;
+    padding:0;
+}
+
+.header {
+    width: 100%;
+    height: 30px;
+}
+
+.body {
+    display: flex;
+    margin: 0px 20px;
+}
+
+.image {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 15px;
+    justify-self: flex-start;
+    height: 250px;
+}
+
+.img {
+    background: blue;
+}
+
+.adv {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.adv .img {
+    height: 500px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    body {
+        background: red;
+    }
+
+    .body {
+        flex-direction: column;
+    }
+
+    .side {
+        width: 20px;
+    }
+
+    .adv {
+        margin: 20px 0 0 0;
+    }
+}
