@@ -1,0 +1,24 @@
+@font-face {
+    font-family: inconsolataRegular;
+    src: 
+        url('../fonts/inconsolata-regular-webfont.woff') format('woff2'),
+        url('../fonts/inconsolata-regular-webfont.woff') format('woff'),
+        url('../fonts/Inconsolata-Regular.tff') format('truetype');
+}
+
+@font-face {
+    font-family: playfair_displayregular;
+    src: 
+        url('../fonts/playfairdisplay-regular-webfont.woff2') format('woff2'),
+        url('../fonts/playfairdisplay-regular-webfont.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-Regular.tff') format('truetype');
+
+}
+
+.p2 {
+    font-family: inconsolataRegular;
+}
+
+.p3 {
+    font-family: playfair_displayregular;
+}
