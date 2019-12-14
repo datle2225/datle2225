@@ -1,11 +1,11 @@
-header {
+body {
     font-family: 'Lato', sans-serif;
 }
 
 .hero>img {
     position: absolute;
     width: 100%;
-    height: 962px;
+    max-height: 962px;
     min-width: 1106px;
     z-index: -1;
     top: 0;
@@ -54,7 +54,6 @@ nav {
 
 .search {
     display: flex;
-    height: 207px;
     max-width: 885px;
     margin-left: 191px;
 }
@@ -111,10 +110,9 @@ nav {
 }
 
 .benefitsSection {
-    position: absolute;
-    left: 89px;
-    right: 89px;
-    top: 739px;
+    margin-left: 89px;
+    margin-right: 89px;
+    margin-top: 149px;
     background: white;
     box-sizing: border-box;
     padding: 93px 102px 0 102px;
@@ -126,6 +124,9 @@ nav {
     font-size: 35px;
     line-height: 42px;
     color: #102746;
+}
+
+.benefitsSection>.sectionHeader {
     margin-bottom: 102px;
 }
 
@@ -158,5 +159,12 @@ nav {
 }
 
 .getInspired {
-    margin-top: 563px;
+    margin-top: 131px;
+    margin-left: 89px;
+}
+
+.line {
+    height: 3px;
+    width: 253px;
+    border: 2px solid #006DFE;
 }
