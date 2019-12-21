@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'NunitoBold';
+    src: 
+        url('../fonts/Nunito-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'NunitoExtraBold';
+    src: 
+        url('../fonts/Nunito-ExtraBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'NunitoSemiBold';
+    src: 
+        url('../fonts/Nunito-SemiBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+* p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #ECECEC;
+}
+
+header {
+    width: 100%;
+    height: 124px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+header > nav.navbar {
+    max-width: 1265px;
+    flex-grow: 1;
+}
+
+header > nav.navbar img {
+    max-width: 85px;
+}
+
+header > nav.navbar #navbarNavDropdown ul.navbar-nav li.nav-item {
+    margin-left: 60px;
+}
+
+header > nav.navbar #navbarNavDropdown ul.navbar-nav li.nav-item.dropdown {
+    cursor: pointer;
+}
+
+header > nav.navbar #navbarNavDropdown ul.navbar-nav.ml-auto li.nav-item svg {
+    height: 40px;
+}
+
+header > nav.navbar-light .navbar-nav .nav-link,
+div.dropdown-item {
+    text-transform: uppercase;
+    color: black;
+    font-family: 'NunitoExtraBold';
+    font-size: 18px;
+    line-height: 22px;
+}
+
+header > nav.navbar-light .navbar-nav div.dropdown-menu {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border: none;
+    cursor: default;
+}
+
+header > nav.navbar-light .navbar-nav div.dropdown-item {
+    padding: 0;
+    color: white;
+    width: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+header > nav.navbar-light .navbar-nav div.dropdown-item:hover,
+header > nav.navbar-light .navbar-nav div.dropdown-item:focus {
+    background: none;
+}
+
+header > nav.navbar-light .navbar-nav ul.dropdown-sub-item {
+    left: 0;
+    font-family: 'NunitoSemiBold';
+    text-transform: none;
+    color: white;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 18px 16px;
+    list-style: none;
+    position: absolute;
+    top: 40px;
+    width: 250px;
+    background: #6690FF;
+    border-radius: 0px 0px 10px 10px;
+    visibility: hidden;
+}
+
+header > nav.navbar-light .navbar-nav div.adopt ul.sub-adopt {
+    left: 0px;
+}
+
+header > nav.navbar-light .navbar-nav ul.dropdown-sub-item li {
+    margin-bottom: 18px;
+    width: 100%;
+    white-space: normal;
+}
+
+header > nav.navbar-light .navbar-nav ul.dropdown-sub-item li:last-child {
+    margin-bottom: 0;
+}
+
+header > nav.navbar-light .navbar-nav ul.dropdown-sub-item li:hover {
+    text-decoration: underline;
+}
+
+header > nav.navbar-light .navbar-nav div.dropdown-item:hover ul.dropdown-sub-item {
+    visibility: visible;
+}
+
+#navbarDropdownMenuLink {
+    display: flex;
+    align-items: center;
+}
+
+#navbarDropdownMenuLink span {
+    margin-right: 8px;
+}
+
+header > nav.navbar-light ul.navbar-nav .nav-link:hover {
+    color: #254EDB;
+}
+
+header > nav.navbar-light ul.navbar-nav .nav-link:hover svg.arrowDownBlue {
+    display: block;
+}
+
+header > nav.navbar-light ul.navbar-nav .nav-link:hover svg.arrowDown {
+    display: none;
+}
+
+svg.arrowDownBlue, svg.arrowUp {
+    display: none;
+}
+
+div.dropdown-menu {
+    position: absolute;
+    width: 996px;
+    height: 50px;
+    left: -200px;
+    top: 40px;
+    background: #0059FF;
+    border-radius: 10px;
+}
+
+@media (max-width: 991px) {
+    header > nav.navbar #navbarNavDropdown ul.navbar-nav li.nav-item {
+        margin-left: 0;
+        padding: 5px 10px;
+    }
+
+    header > nav.navbar #navbarNavDropdown {
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 124px;
+    }
+}
