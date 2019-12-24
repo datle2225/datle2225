@@ -9,10 +9,13 @@ $(".title").on("click", function() {
     $(this).parent().siblings().removeClass("blueColor");
     deactiveIcon($(this).parent().siblings());
     $(this).parent().toggleClass("blueColor");
-    $(this).children(".activeIcon").toggleClass("show");
+    console.log($(this).not(".adopt"))
+    if (window.innerWidth > 991) $(this).children(".activeIcon").toggleClass("show");
+    else $(this).not(".adopt").children(".activeIcon").toggleClass("show");
     $(this).children(".defaultIcon").toggleClass("hide");
     $(this).children(".hoverIcon").toggleClass("hide");
-    $(this).siblings(".nav-subnav").toggleClass("show");
+    if (window.innerWidth > 991) $(this).siblings(".nav-subnav").toggleClass("show");
+    else $(this).siblings(".nav-subnav:not(.adopt)").toggleClass("show");
 })
 
 $(".hamburger-menu").on("click", function() {
@@ -22,4 +25,8 @@ $(".hamburger-menu").on("click", function() {
     $(".activeIcon-hamburger").toggleClass("show");
     $(".defaultIcon-hamburger").toggleClass("hide");
     $(".nav-menu:not('.hamburger-menu')").slideToggle("fast");
+})
+
+$("#nav-item-search").children("svg").on("click", () => {
+    $("#nav-item-search-active").toggle("slide", {direction:'right'}, 500);
 })

@@ -67,13 +67,14 @@ header > nav div.nav-menu {
     display: flex;
     align-items: center;
     flex-grow: 1;
+    position: relative;
 }
 
 header > nav div.nav-item {
     text-transform: uppercase;
     color: #393E46;
     font-family: 'NunitoExtraBold';
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 22px;
     margin-left: 60px;
     padding: 20px 0;
@@ -114,7 +115,7 @@ header > nav div.nav-item:hover svg.defaultIcon,
     display: none;
 }
 
-header > nav div.nav-item div.search-input {
+header > nav div.nav-item div.search-input-article {
     display: none;
 }
 
@@ -132,8 +133,135 @@ header > nav div.nav-item ul.nav-subnav {
     padding: 0 15px;
 }
 
-header > nav div.nav-item ul.nav-subnav.takecare {
+header > nav div.nav-item ul.nav-subnav.adopt {
     left: -350px;
+    width: 916px;
+}
+
+#nav-item-search-active {
+    display: none;
+    position: absolute;
+    width: 950px;
+    height: 124px;
+    left: -175px;
+    padding-left: 20px;
+    background: #0059FF;
+    color: white;
+    cursor: default;
+}
+
+#nav-item-search-active img {
+    cursor: pointer;
+}
+
+#nav-item-search-active label.search-title {
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+#nav-item-search-active input {
+    width: 488px;
+    background-color: #0059FF;
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+#nav-item-search-active svg {
+    margin-left: 18px;
+}
+
+header > nav div.nav-item ul.nav-subnav div.background-css-1 {
+    position: absolute;
+    width: 330px;
+    height: 50px;
+    left: -15px;
+    background: #091A7A;
+    border-radius: 10px 8px 8px 10px;
+}
+
+header > nav div.nav-item ul.nav-subnav div.background-css-2 {
+    position: absolute;
+    background-color: #091A7A;
+    left: 298px;
+    top: 2px;
+}
+header > nav div.nav-item ul.nav-subnav div.background-css-2:before,
+header > nav div.nav-item ul.nav-subnav div.background-css-2:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+header > nav div.nav-item ul.nav-subnav div.background-css-2,
+header > nav div.nav-item ul.nav-subnav div.background-css-2:before,
+header > nav div.nav-item ul.nav-subnav div.background-css-2:after {
+	width:  31px;
+	height: 31px;
+	border-top-right-radius: 60%;
+}
+
+header > nav div.nav-item ul.nav-subnav div.background-css-2 {
+	transform: rotate(-90deg) skewX(-30deg) scale(1,.866);
+}
+header > nav div.nav-item ul.nav-subnav div.background-css-2:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+header > nav div.nav-item ul.nav-subnav div.background-css-2:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+header > nav div.nav-item ul.nav-subnav div.background-css-3 {
+    position: absolute;
+    width: 232px;
+    height: 50px;
+    left: 700px;
+
+    background: #1939B7;
+    border-radius: 0px 10px 10px 0px;
+}
+
+header > nav div.nav-item ul.nav-subnav label.decription {
+    position: absolute;
+    line-height: 50px;
+    left: 0px;
+    z-index: 1000;
+    font-size: 1.6rem;
+}
+
+header > nav div.nav-item ul.nav-subnav div.search-div-location {
+    height: 50px;
+    position: absolute;
+    line-height: 50px;
+    left: 370px;
+    z-index: 1000;
+    font-size: 1.6rem;
+    color: white;
+}
+
+#search-location {
+    width: 300px;
+    background: #0059FF;
+    line-height: 1.6rem;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+#search-location::placeholder {
+    color: white;
+}
+
+header > nav div.nav-item ul.nav-subnav div.search-button-location {
+    height: 50px;
+    position: absolute;
+    left: 720px;
+    z-index: 1000;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-transform: none;
+}
+
+header > nav div.nav-item ul.nav-subnav div.search-button-location svg{
+    margin-right: 15px;
 }
 
 header > nav div.nav-item ul.nav-subnav > li {
@@ -195,6 +323,12 @@ header > nav div.hamburger-menu {
     color: #254EDB !important;
 }
 
+/* section {
+    background-color: tomato;
+    width: 100%;
+    height: 2000px;
+} */
+
 @media (max-width: 991px) {
     header > nav div.hamburger-menu {
         display: flex;
@@ -205,7 +339,7 @@ header > nav div.hamburger-menu {
         display: none;
         flex-direction: column;
         align-items: flex-start;
-        position: fixed;
+        position: absolute;
         width: 100%;
         top: 124px;
         left: 0;
@@ -219,6 +353,14 @@ header > nav div.hamburger-menu {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+    }    
+
+    header > nav div.nav-item.adopt > div.title svg {
+        display: none;
+    }
+
+    header > nav div.nav-item:hover svg {
+        display: none;
     }
 
     header > nav div.nav-item ul.nav-subnav {
@@ -230,10 +372,19 @@ header > nav div.hamburger-menu {
         color: black;
         display: none;
         padding: 0;
+        height: auto;
+    }
+
+    header > nav div.nav-item ul.adopt {
+        display: none;
     }
 
     header > nav div.nav-item ul.nav-subnav li {
         display: block;
+    }
+
+    header > nav div.nav-item ul.nav-subnav li:hover ul.subnav {
+        display: none;
     }
 
 
@@ -241,7 +392,7 @@ header > nav div.hamburger-menu {
         display: none;
     }
 
-    header > nav div.nav-item div.search-input {
+    header > nav div.nav-item div.search-input-article {
         display: flex;
         align-items: center;
         border: 2px solid #091A7A;
@@ -252,17 +403,18 @@ header > nav div.hamburger-menu {
         box-sizing: content-box;
     }
 
-    header > nav div.nav-item div.search-input input {
+    header > nav div.nav-item div.search-input-article input {
         flex-grow: 1;
         margin-right: 5px;
         border-bottom: 1px solid grey;
     }
 
-    header > nav div.nav-item div.search-input svg {
+    header > nav div.nav-item div.search-input-article svg {
         justify-self: flex-end;
+        display: inline;
     }
 
-    header > nav div.nav-item div.search-input *:last-child {
+    header > nav div.nav-item div.search-input-article *:last-child {
         border-left: none;
     }
 }
