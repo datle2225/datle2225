@@ -144,19 +144,20 @@ header > nav div.nav-item ul.nav-subnav.adopt {
     width: 950px;
     height: 124px;
     left: -175px;
-    padding-left: 20px;
+    padding: 0 0 0 20px;
     background: #0059FF;
     color: white;
     cursor: default;
+    align-items: center;
 }
 
-#nav-item-search-active img {
+#nav-item-search-active * {
     cursor: pointer;
 }
 
 #nav-item-search-active label.search-title {
     margin-left: 60px;
-    cursor: pointer;
+    margin-right: 10px;
 }
 
 #nav-item-search-active input {
@@ -309,6 +310,10 @@ header > nav div.hamburger-menu {
 
 .show {
     display: block !important;
+}
+
+.show-flex {
+    display: flex !important;
 }
 
 .hide {

@@ -9,7 +9,6 @@ $(".title").on("click", function() {
     $(this).parent().siblings().removeClass("blueColor");
     deactiveIcon($(this).parent().siblings());
     $(this).parent().toggleClass("blueColor");
-    console.log($(this).not(".adopt"))
     if (window.innerWidth > 991) $(this).children(".activeIcon").toggleClass("show");
     else $(this).not(".adopt").children(".activeIcon").toggleClass("show");
     $(this).children(".defaultIcon").toggleClass("hide");
@@ -28,5 +27,15 @@ $(".hamburger-menu").on("click", function() {
 })
 
 $("#nav-item-search").children("svg").on("click", () => {
-    $("#nav-item-search-active").toggle("slide", {direction:'right'}, 500);
+    $("#nav-item-search-active").addClass("show-flex");
+    deactiveIcon($(".nav-item"));
+    $(".nav-item").removeClass("blueColor");
 })
+
+$("svg.search-article-close").on("click", () => {
+    $("#nav-item-search-active").removeClass("show-flex");
+})
+
+// $("svg.search-article").on("click", () => {
+//     $("#nav-item-search-active").removeClass("show-flex");
+// })

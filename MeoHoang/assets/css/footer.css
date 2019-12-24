@@ -90,15 +90,20 @@ div.footer div.footer-item div.media svg {
     cursor: pointer;
 }
 
-div.footer div.footer-item ul {
+div.footer div.footer-item ul.list {
     list-style: none;
 }
 
-div.footer div.footer-item ul li {
+div.footer div.footer-item ul.list li {
     margin-bottom: 14px;
+    cursor: pointer;
 }
 
-div.footer div.footer-item ul li:last-child {
+div.footer div.footer-item ul.list li:hover {
+    text-decoration: underline;
+}
+
+div.footer div.footer-item ul.list li:last-child {
     margin-bottom: 0;
 }
 
