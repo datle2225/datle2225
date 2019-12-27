@@ -1,0 +1,70 @@
+@import "./header.css";
+@import "./footer.css";
+
+@font-face {
+    font-family: 'NunitoBold';
+    src: 
+        url('../fonts/Nunito-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'NunitoExtraBold';
+    src: 
+        url('../fonts/Nunito-ExtraBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'NunitoSemiBold';
+    src: 
+        url('../fonts/Nunito-SemiBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #ECECEC;
+
+}
+
+div.banner {
+    width: 100%;
+}
+
+div.banner img {
+    max-height: 800px;
+    width: 100%;
+}
+
+section.search-location {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 62%;
+}
+
+section.search-location div {
+    width: 883px;
+    height: 100px;
+    background-color: #254EDB;
+    border-radius: 10px;
+
+}
