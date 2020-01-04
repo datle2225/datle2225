@@ -1,5 +1,6 @@
 @import "./header.css";
 @import "./footer.css";
+@import "./modal.css";
 
 @font-face {
     font-family: 'NunitoBold';
@@ -41,16 +42,13 @@ html {
 
 body {
     background-color: #ECECEC;
-
 }
 
 div.banner {
-    width: 100%;
-}
-
-div.banner img {
-    max-height: 800px;
-    width: 100%;
+    min-height: 410px;
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 section.search-location {
@@ -58,13 +56,347 @@ section.search-location {
     width: 100%;
     display: flex;
     justify-content: center;
-    top: 62%;
+    top: 484px;
 }
 
-section.search-location div {
+section.search-location div.background-css {
     width: 883px;
     height: 100px;
     background-color: #254EDB;
     border-radius: 10px;
+    position: relative;
+}
 
+section.search-location div.background-css div.background-css-1 {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    
+    background: #091A7A;
+    border-radius: 10px;
+}
+
+section.search-location div.background-css div.background-css-2 {
+    position: absolute;
+    background-color: #091A7A;
+    left: 274px;
+    top: 4px;
+}
+section.search-location div.background-css div.background-css-2:before,
+section.search-location div.background-css div.background-css-2:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+section.search-location div.background-css div.background-css-2,
+section.search-location div.background-css div.background-css-2:before,
+section.search-location div.background-css div.background-css-2:after {
+	width:  60px;
+	height: 60px;
+	border-top-right-radius: 46%;
+}
+
+section.search-location div.background-css div.background-css-2 {
+	transform: rotate(-90deg) skewX(-30deg) scale(1,.866);
+}
+section.search-location div.background-css div.background-css-2:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+section.search-location div.background-css div.background-css-2:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+section.search-location div.background-css label.decription {
+    position: absolute;
+    z-index: 1;
+    font-size: 1.6rem;
+    color: #F6F4F5;
+    font-family: 'NunitoExtraBold';
+    line-height: 100px;
+    left: 20px;
+    margin: 0;
+}
+
+section.search-location div.background-css div.search-div-location {
+    height: 100px;
+    position: absolute;
+    line-height: 100px;
+    left: 380px;
+    z-index: 1;
+    font-size: 1.6rem;
+    color: white;
+}
+
+section.search-location div.background-css div.search-div-location input[name='search-location'] {
+    width: 300px;
+    background: #254EDB;
+    line-height: 1.6rem;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+section.search-location div.background-css div.search-div-location input[name='search-location']::placeholder {
+    color: white;
+}
+
+section.search-location div.background-css div.search-button-location {
+    width: 195px;
+    height: 100px;
+    position: absolute;
+    left: 690px;
+    z-index: 1000;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-transform: none;
+    font-size: 1.6rem;
+    background-color: #1939B7;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+section.search-location div.background-css div.search-button-location svg {
+    margin: 0 15px;
+}
+
+section.prepare {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+section.prepare div.body {
+    width: 1265px;
+    padding: 128px 20px 80px 20px;
+    box-sizing: border-box;
+}
+
+section.prepare div.body h2 {
+    font-family: 'NunitoExtraBold';
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+section.prepare div.body div.card-menu {
+    width: 100%;
+    height: 240px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+}
+
+#carouselExampleIndicators {
+    display: none;
+}
+
+section.prepare div.body div.card-menu div.card-item {
+    max-width: 286px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.prepare div.body div.card-menu div.card-item div.title {
+    font-family: 'NunitoExtraBold';
+    font-size: 20px;
+    line-height: 24px;
+}
+
+section.prepare div.body div.card-menu div.card-item div.description {
+    font-family: 'NunitoSemiBold';
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+section.prepare div.body div.card-menu div.card-item button.detailButton {
+    border: 2px solid #4586FF;
+    box-sizing: border-box;
+    border-radius: 40px;
+    font-family: 'NunitoExtraBold';
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #0059FF;
+    width: 133px;
+    height: 39px;
+    background-color: white;
+}
+
+section.prepare div.body div.card-menu div.card-item button.detailButton:hover {
+    color: white;
+    border: 0;
+    background-color: #0059FF;
+}
+
+section.prepare div.body div.card-menu div.card-item button.detailButton:focus {
+    outline: none;
+}
+
+section.section2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section.section2 div.body {
+    padding: 80px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1265px;
+}
+
+section.section2 div.body div.articalCard {
+    width: 427px;
+    height: 573px;
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 81px;
+}
+
+section.section2 div.body div.articalCard:last-child {
+    margin: 0;
+}
+
+section.section2 div.body div.articalCard div.coverImage {
+    width: 100%;
+    height: 320px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+section.section2 div.body div.articalCard div.avatarDiv {
+    position: absolute;
+    top: 250px;
+    width: 100%;
+}
+
+section.section2 div.body div.articalCard div.avatarDiv div.avatarImage {
+    width: 120px;
+    height: 120px;
+    border: 8px solid white;
+    border-radius: 120px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+section.section2 div.body div.articalCard div.articalCard-title {
+    margin-top: 75px;
+    margin-bottom: 10px;
+    font-size: 2.0em;
+    font-family: "NunitoExtraBold";
+    text-align: center;
+}
+
+section.section2 div.body div.articalCard div.articalCard-description {
+    font-size: 1.4em;
+    max-width: 243px;
+    font-family: "NunitoSemiBold";
+    text-align: center;
+}
+
+section.section2 div.body div.articalCard div.articalCard-bottom {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+section.section2 div.body div.articalCard div.articalCard-bottom div.articalCard-button {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 2.0em;
+    font-family: "NunitoExtraBold";
+    color: #0059FF;
+    padding: 20px 0;
+    border-top: 3px solid #0059FF;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+section.section2 div.body div.articalCard:hover div.articalCard-bottom div.articalCard-button {
+    background-color: #0059FF;
+    color: white;
+}
+
+@media (max-width: 991px) {
+    section.search-location div.background-css div.background-css-1,
+    section.search-location,
+    section.search-location div.background-css,
+    section.prepare div.body {
+        width: 100%;
+    }
+
+    section.search-location div.background-css div.background-css-2,
+    section.search-location div.background-css div.background-css-3,
+    section.search-location div.background-css div.search-div-location input[name='search-location'],
+    section.search-location div.background-css div.search-button-location {
+        display: none;
+    }
+
+    section.search-location div.background-css label.decription {
+        width: 100%;
+        text-align: center;
+        left: 0;
+    }
+
+    section.prepare div.body {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    section.prepare div.body div.card-menu > div.card-item {
+        display: none;
+    }
+
+    #carouselExampleIndicators {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    #carouselExampleIndicators div.carousel-inner {
+        height: 100%;
+        display: flex;
+    }
+
+    #carouselExampleIndicators div.carousel-inner div.carousel-item div.card-item1 {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #carouselExampleIndicators a.carousel-control-next,
+    #carouselExampleIndicators a.carousel-control-prev {
+        opacity: 1;
+        width: 5%;
+    }
+
+    section.section2 div.body {
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    section.section2 div.body div.articalCard {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    section.section2 div.body div.articalCard:last-child {
+        margin-bottom: 0;
+    }
 }

@@ -25,6 +25,7 @@ header > nav div.nav-menu {
     align-items: center;
     flex-grow: 1;
     position: relative;
+    z-index: 1000;
 }
 
 header > nav div.nav-item {
@@ -56,7 +57,7 @@ header > nav div.nav-item:hover {
     color: #254EDB;
 }
 
-header > nav div.nav-item div.title {
+header > nav div.nav-item div.header-title {
     display: flex;
     align-items: center;
 }
@@ -98,10 +99,10 @@ header > nav div.nav-item ul.nav-subnav.adopt {
 #nav-item-search-active {
     display: none;
     position: absolute;
-    width: 950px;
+    width: 85%;
     height: 124px;
     left: -175px;
-    padding: 0 0 0 20px;
+    padding: 0 20px;
     background: #0059FF;
     color: white;
     cursor: default;
@@ -118,7 +119,7 @@ header > nav div.nav-item ul.nav-subnav.adopt {
 }
 
 #nav-item-search-active input {
-    width: 488px;
+    flex-grow: 1;
     background-color: #0059FF;
     border-bottom: 2px solid white;
     color: white;
@@ -195,7 +196,7 @@ header > nav div.nav-item ul.nav-subnav div.search-div-location {
     color: white;
 }
 
-#search-location {
+header > nav div.nav-item ul.nav-subnav div.search-div-location input[name='search-location'] {
     width: 300px;
     background: #0059FF;
     line-height: 1.6rem;
@@ -203,7 +204,7 @@ header > nav div.nav-item ul.nav-subnav div.search-div-location {
     border-bottom: 2px solid white;
 }
 
-#search-location::placeholder {
+header > nav div.nav-item ul.nav-subnav div.search-div-location input[name='search-location']::placeholder {
     color: white;
 }
 
@@ -285,6 +286,18 @@ header > nav div.hamburger-menu {
     color: #254EDB !important;
 }
 
+@media (max-width: 1080px) {
+    header > nav div.nav-item {
+        font-size: 1.4em;
+    }
+
+    div.dropdown svg {
+        height: 8px;
+        margin-left: 5px;
+        margin-bottom: 2px;
+    }
+}
+
 @media (max-width: 991px) {
     header > nav div.hamburger-menu {
         display: flex;
@@ -311,7 +324,7 @@ header > nav div.hamburger-menu {
         justify-content: center;
     }    
 
-    header > nav div.nav-item.adopt > div.title svg {
+    header > nav div.nav-item.adopt > div.header-title svg {
         display: none;
     }
 

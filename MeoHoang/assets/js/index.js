@@ -8,7 +8,7 @@ $("header").load("header.html nav", () => {
         $el.children(".nav-subnav").removeClass("show");
     }
     
-    $(".title").on("click", function() {
+    $(".header-title").on("click", function() {
         $(this).parent().siblings().removeClass("blueColor");
         deactiveIcon($(this).parent().siblings());
         $(this).parent().toggleClass("blueColor");
@@ -43,6 +43,22 @@ $("header").load("header.html nav", () => {
     //     $("#nav-item-search-active").removeClass("show-flex");
     // })
 });
+
+// $("modal").load("modal.html", () => {
+//     $("div.modal-input-row").children("input").each((_, el) => {
+//         $(el).on("blur", () => {
+//             if ($(el).val().trim()) {
+//                 $(el).removeClass("redBorder").addClass("greenBorder");
+//             }
+//             else {
+//                 $(el).removeClass("greenBorder");
+//                 if ($(el).attr("name") != "firstName" && $(el).attr("name") != "lastName") {
+//                     $(el).addClass("redBorder");
+//                 }
+//             }
+//         })
+//     });
+// });
 
 $("footer").load("footer.html div.footer", () => {
     let deactiveArrow = $el => {
