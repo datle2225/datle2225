@@ -1,27 +1,23 @@
 @import "./header.css";
 @import "./footer.css";
 @import "./modal.css";
-
 @font-face {
     font-family: 'NunitoBold';
-    src: 
-        url('../fonts/Nunito-Bold.ttf') format('truetype');
+    src: url('../fonts/Nunito-Bold.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'NunitoExtraBold';
-    src: 
-        url('../fonts/Nunito-ExtraBold.ttf') format('truetype');
+    src: url('../fonts/Nunito-ExtraBold.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'NunitoSemiBold';
-    src: 
-        url('../fonts/Nunito-SemiBold.ttf') format('truetype');
+    src: url('../fonts/Nunito-SemiBold.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }
@@ -71,7 +67,6 @@ section.search-location div.background-css div.background-css-1 {
     width: 300px;
     height: 100px;
     position: absolute;
-    
     background: #091A7A;
     border-radius: 10px;
 }
@@ -82,28 +77,32 @@ section.search-location div.background-css div.background-css-2 {
     left: 274px;
     top: 4px;
 }
+
 section.search-location div.background-css div.background-css-2:before,
 section.search-location div.background-css div.background-css-2:after {
-	content: '';
-	position: absolute;
-	background-color: inherit;
+    content: '';
+    position: absolute;
+    background-color: inherit;
 }
+
 section.search-location div.background-css div.background-css-2,
 section.search-location div.background-css div.background-css-2:before,
 section.search-location div.background-css div.background-css-2:after {
-	width:  60px;
-	height: 60px;
-	border-top-right-radius: 46%;
+    width: 60px;
+    height: 60px;
+    border-top-right-radius: 46%;
 }
 
 section.search-location div.background-css div.background-css-2 {
-	transform: rotate(-90deg) skewX(-30deg) scale(1,.866);
+    transform: rotate(-90deg) skewX(-30deg) scale(1, .866);
 }
+
 section.search-location div.background-css div.background-css-2:before {
-	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
 }
+
 section.search-location div.background-css div.background-css-2:after {
-	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
 }
 
 section.search-location div.background-css label.decription {
@@ -189,7 +188,7 @@ section.prepare div.body div.card-menu {
     border: 0;
 }
 
-#carouselExampleIndicators {
+#carouselIndicators {
     display: none;
 }
 
@@ -229,6 +228,11 @@ section.prepare div.body div.card-menu div.card-item button.detailButton {
     background-color: white;
 }
 
+section.prepare div.body div.card-menu div.card-item svg {
+    cursor: pointer;
+}
+
+section.prepare div.body div.card-menu div.card-item svg:hover~button.detailButton,
 section.prepare div.body div.card-menu div.card-item button.detailButton:hover {
     color: white;
     border: 0;
@@ -338,64 +342,53 @@ section.section2 div.body div.articalCard:hover div.articalCard-bottom div.artic
     section.prepare div.body {
         width: 100%;
     }
-
     section.search-location div.background-css div.background-css-2,
     section.search-location div.background-css div.background-css-3,
     section.search-location div.background-css div.search-div-location input[name='search-location'],
     section.search-location div.background-css div.search-button-location {
         display: none;
     }
-
     section.search-location div.background-css label.decription {
         width: 100%;
         text-align: center;
         left: 0;
     }
-
     section.prepare div.body {
         padding-top: 80px;
         padding-bottom: 40px;
     }
-
-    section.prepare div.body div.card-menu > div.card-item {
+    section.prepare div.body div.card-menu>div.card-item {
         display: none;
     }
-
-    #carouselExampleIndicators {
+    #carouselIndicators {
         display: block;
         width: 100%;
         height: 100%;
     }
-
-    #carouselExampleIndicators div.carousel-inner {
+    #carouselIndicators div.carousel-inner {
         height: 100%;
         display: flex;
     }
-
-    #carouselExampleIndicators div.carousel-inner div.carousel-item div.card-item1 {
+    #carouselIndicators div.carousel-inner div.carousel-item div.card-item1 {
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
-    #carouselExampleIndicators a.carousel-control-next,
-    #carouselExampleIndicators a.carousel-control-prev {
+    #carouselIndicators a.carousel-control-next,
+    #carouselIndicators a.carousel-control-prev {
         opacity: 1;
         width: 5%;
     }
-
     section.section2 div.body {
         width: 100%;
         padding-top: 40px;
     }
-
     section.section2 div.body div.articalCard {
         width: 100%;
         margin-right: 0;
         margin-bottom: 20px;
     }
-
     section.section2 div.body div.articalCard:last-child {
         margin-bottom: 0;
     }

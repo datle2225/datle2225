@@ -43,6 +43,7 @@ div.modal-content form.modal-input-form div.modal-input-row.smallwidth input {
     max-width: 150px;
 }
 
+div.modal-dismiss,
 div.modal-content form.modal-input-form div.modal-input-row img {
     cursor: pointer;
 }
@@ -51,10 +52,17 @@ div.modal-content form.modal-input-form div.modal-input-row img.showPass {
     display: none;
 }
 
+div.modal-content form.modal-input-form p.warn {
+    display: none;
+    color: #F13E4B;
+    font-family: "NunitoSemiBold";
+    font-size: 1.4em;
+}
+
 div.modal-content input.modal-button {
     background: #4586FF;
     border-radius: 20px;
-    height: 32px;
+    height: 42px;
     width: 100%;
     font-size: 1.6em;
     font-family: "NunitoExtraBold";
@@ -70,6 +78,53 @@ div.modal-content div.modal-bottom {
     font-family: "NunitoSemiBold";
 }
 
+div.modal-content div.modal-notification {
+    align-self: center;
+    font-family: "NunitoExtraBold";
+    font-size: 1.6em;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+div.modal-content div.modal-welcome {
+    align-self: center;
+    text-align: center;
+    font-family: "NunitoExtraBold";
+    font-size: 2.2em;
+    line-height: 29px;
+    margin-bottom: 32px;
+    color: #0059FF;
+}
+
+div.modal-content div.modal-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+div.modal-content div.modal-cards div.modal-card {
+    cursor: pointer;
+}
+
+div.modal-content div.modal-cards div.modal-card div.modal-item-img {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+div.modal-content div.modal-cards div.modal-card div.modal-item-title {
+    border-radius: 0 0 20px 20px;
+    border: 3px solid #0059FF;
+    font-size: 1.4em;
+    text-align: center;
+    color: #0059FF;
+    font-family: "NunitoSemiBold";
+    padding: 9px;
+}
+
+div.modal-content div.modal-cards div.modal-card:hover div.modal-item-title {
+    background-color: #0059FF;
+    color: white;
+}
+
 .greenBorder {
     border-color: #B2D430 !important;
 }
@@ -82,8 +137,7 @@ div.modal-content div.modal-bottom {
     div.modal-content form.modal-input-form div.modal-input-row:first-child input {
         width: 50%;
     }
-    
-    div.modal-content form.modal-input-form div.modal-input-row:last-child input {
+    div.modal-content form.modal-input-form div.modal-input-row:nth-last-child(2) input {
         width: 50%;
     }
 }
