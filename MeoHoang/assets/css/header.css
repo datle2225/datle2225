@@ -262,8 +262,37 @@ header > nav div.nav-item ul.nav-subnav li ul.subnav li:hover {
     text-decoration: underline;
 }
 
-header > nav div.hamburger-menu {
+header > nav div.hamburger-menu,
+#likeList,
+#account,
+header > nav div.nav-login svg:last-child,
+header > nav div.nav-login:hover svg:first-child {
     display: none;
+}
+
+header > nav div.nav-login {
+    margin-left: 60px;
+    position: relative;
+}
+
+header > nav div.nav-login:hover svg:last-child {
+    display: block;
+}
+
+header > nav div.sub-account {
+    position: absolute;
+    width: 124px;
+    height: 89px;
+    left: 1058px;
+    top: 55px;
+
+    background: #0059FF;
+    border-radius: 0px 0px 20px 20px;
+}
+
+#likeList,
+#account {
+    cursor: pointer;
 }
 
 .show {

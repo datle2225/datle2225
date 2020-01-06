@@ -45,6 +45,12 @@ $("header").load("header.html nav", () => {
     // $("svg.search-article").on("click", () => {
     //     $("#nav-item-search-active").removeClass("show-flex");
     // })
+
+    $("#likeList").on("click", () => {
+        $("#likeList").children(":first-child").hide();
+        $("#likeList").children(":last-child").show();
+        location.href = "modal.html";
+    })
 });
 
 // --- modal ---
@@ -127,6 +133,7 @@ $("#submit-login").on("click", () => {
 })
 
 $("#submit-signup").on("click", () => {
+    
     var error = [true, true];
     var $username = $("div.modal-input-row").children("input[name = 'username']")[1];
     var $password = $("div.modal-input-row").children("input[name = 'password']")[1];
@@ -177,6 +184,11 @@ $("#submit-signup").on("click", () => {
         sessionStorage.setItem("username", user["username"]);
         sessionStorage.setItem("name", user["lastName"] + user["firstName"]);
         sessionStorage.setItem("likeList", user["likeList"]);
+
+        $("div.nav-item[data-target='#signup']").hide();
+        $("div.nav-item[data-target='#login']").hide();
+        $("#likeList").show();
+        $("#account").show();
     }
 });
 
