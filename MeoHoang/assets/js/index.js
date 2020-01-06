@@ -50,7 +50,21 @@ $("header").load("header.html nav", () => {
         $("#likeList").children(":first-child").hide();
         $("#likeList").children(":last-child").show();
         location.href = "modal.html";
-    })
+    });
+
+    $("#account").children("svg").on("click", () => {
+        $(".sub-account").toggleClass("show");
+        $($("#account").children("svg")[0]).toggleClass("hide");
+        $($("#account").children("svg")[1]).toggleClass("show");
+    });
+
+    $("#logout").on("click", () => {
+        sessionStorage.clear();
+        $("#likeList").hide();
+        $("#account").hide();
+        $("div.nav-item[data-target='#signup']").show();
+        $("div.nav-item[data-target='#login']").show();
+    });
 });
 
 // --- modal ---
@@ -123,21 +137,26 @@ $("#submit-login").on("click", () => {
         if (!Object.keys(user).length) {
             $($username).removeClass("greenBorder").addClass("redBorder");
             $($password).removeClass("greenBorder").addClass("redBorder");
-            $($password).parent().next("p.warn").addClass("show").text("Sai tài khoản hoặc mật khẩu");
+            $($password).val("").parent().next("p.warn").addClass("show").text("Sai tài khoản hoặc mật khẩu");
         } else {
             sessionStorage.setItem("username", user["username"]);
             sessionStorage.setItem("name", user["lastName"] + user["firstName"]);
             sessionStorage.setItem("likeList", user["likeList"]);
+            $('#login').modal('hide');
+
+            $("div.nav-item[data-target='#signup']").hide();
+            $("div.nav-item[data-target='#login']").hide();
+            $("#likeList").show();
+            $("#account").show();
         }
     }
 })
 
 $("#submit-signup").on("click", () => {
-    
     var error = [true, true];
     var $username = $("div.modal-input-row").children("input[name = 'username']")[1];
     var $password = $("div.modal-input-row").children("input[name = 'password']")[1];
-    var $confirm = $("div.modal-input-row").children("input[name = 'confirm']");
+    var $confirm = $("div.modal-input-row").children("input[name = 'confirm']")[0];
 
     if ($($username).val().trim()) {
         if (User.prototype.getUsernames().includes($($username).val().trim())) {
@@ -178,12 +197,12 @@ $("#submit-signup").on("click", () => {
             "lastName": $("div.modal-input-row").children("input[name = 'lastName']").val().trim()
         }
         User.prototype.addUser(user);
-        $('#signup').modal('hide');
-        $('#signupSuccess').modal('show');
         var user = User.prototype.login($($username).val().trim(), $($password).val());
         sessionStorage.setItem("username", user["username"]);
         sessionStorage.setItem("name", user["lastName"] + user["firstName"]);
         sessionStorage.setItem("likeList", user["likeList"]);
+        $('#signup').modal('hide');
+        $('#signupSuccess').modal('show');
 
         $("div.nav-item[data-target='#signup']").hide();
         $("div.nav-item[data-target='#login']").hide();
@@ -192,6 +211,51 @@ $("#submit-signup").on("click", () => {
     }
 });
 
+$("#submit-changePass").on("click", () => {
+    var error = [true, true];
+    var $oldPassword = $("div.modal-input-row").children("input[name = 'password']")[2];
+    var $newPassword = $("div.modal-input-row").children("input[name = 'password']")[3];
+    var $confirm = $("div.modal-input-row").children("input[name = 'confirm']")[1];
+
+    if (!$($oldPassword).val()) {
+        $($oldPassword).removeClass("greenBorder").addClass("redBorder");
+        $($oldPassword).parent().next("p.warn").addClass("show").text("Hãy nhập mật khẩu hiện tại");
+    } else {
+        error.pop();
+        $($oldPassword).removeClass("redBorder").addClass("greenBorder");
+        $($oldPassword).parent().next("p.warn").removeClass("show");
+    }
+
+    if (!$($newPassword).val().match(/^(?=.*\d)(?=.*[a-zA-Z]).{6,}$/)) {
+        $($newPassword).removeClass("greenBorder").addClass("redBorder");
+        $($newPassword).parent().next("p.warn").addClass("show");
+    } else {
+        $($newPassword).parent().next("p.warn").removeClass("show");
+        if ($($newPassword).val() != $($confirm).val()) {
+            $($newPassword).removeClass("greenBorder").addClass("redBorder");
+            $($confirm).removeClass("greenBorder").addClass("redBorder");
+            $($confirm).parent().next("p.warn").addClass("show");
+        } else {
+            error.pop();
+            $($newPassword).removeClass("redBorder").addClass("greenBorder");
+            $($confirm).removeClass("redBorder").addClass("greenBorder");
+            $($confirm).parent().next("p.warn").removeClass("show");
+        }
+    }
+
+    if (!error.includes(true)) {
+        if (User.prototype.changPassword(sessionStorage.getItem("username"), $($oldPassword).val(), $($newPassword).val())) {
+            $('#changePassModal').modal('hide');
+            $('#changePassSuccess').modal('show');
+        } else {
+            $($oldPassword).removeClass("greenBorder").addClass("redBorder");
+            $($oldPassword).parent().next("p.warn").addClass("show").text("Mật khẩu không chính xác");
+            $($oldPassword).val("");
+            $($newPassword).val("");
+            $($confirm).val("");
+        }
+    }
+});
 
 // --- footer ---
 

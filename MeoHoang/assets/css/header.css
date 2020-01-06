@@ -7,7 +7,7 @@ header {
     align-items: center;
 }
 
-header > nav {
+header>nav {
     padding: 0 20px;
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@ header > nav {
     display: none;
 }
 
-header > nav div.nav-menu {
+header>nav div.nav-menu {
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -28,7 +28,7 @@ header > nav div.nav-menu {
     z-index: 1000;
 }
 
-header > nav div.nav-item {
+header>nav div.nav-item {
     text-transform: uppercase;
     color: #393E46;
     font-family: 'NunitoExtraBold';
@@ -53,31 +53,31 @@ div.dropdown svg {
     margin-left: 8px;
 }
 
-header > nav div.nav-item:hover {
+header>nav div.nav-item:hover {
     color: #254EDB;
 }
 
-header > nav div.nav-item div.header-title {
+header>nav div.nav-item div.header-title {
     display: flex;
     align-items: center;
 }
 
-header > nav div.nav-item:hover svg.hoverIcon {
+header>nav div.nav-item:hover svg.hoverIcon {
     display: block;
 }
 
-header > nav div.nav-item svg.hoverIcon,
-header > nav div.nav-item svg.activeIcon,
-header > nav div.nav-item:hover svg.defaultIcon,
+header>nav div.nav-item svg.hoverIcon,
+header>nav div.nav-item svg.activeIcon,
+header>nav div.nav-item:hover svg.defaultIcon,
 .activeIcon-hamburger {
     display: none;
 }
 
-header > nav div.nav-item div.search-input-article {
+header>nav div.nav-item div.search-input-article {
     display: none;
 }
 
-header > nav div.nav-item ul.nav-subnav {
+header>nav div.nav-item ul.nav-subnav {
     list-style: none;
     color: white;
     position: absolute;
@@ -91,7 +91,7 @@ header > nav div.nav-item ul.nav-subnav {
     padding: 0 15px;
 }
 
-header > nav div.nav-item ul.nav-subnav.adopt {
+header>nav div.nav-item ul.nav-subnav.adopt {
     left: -350px;
     width: 916px;
 }
@@ -129,7 +129,7 @@ header > nav div.nav-item ul.nav-subnav.adopt {
     margin-left: 18px;
 }
 
-header > nav div.nav-item ul.nav-subnav div.background-css-1 {
+header>nav div.nav-item ul.nav-subnav div.background-css-1 {
     position: absolute;
     width: 330px;
     height: 50px;
@@ -138,47 +138,50 @@ header > nav div.nav-item ul.nav-subnav div.background-css-1 {
     border-radius: 10px 8px 8px 10px;
 }
 
-header > nav div.nav-item ul.nav-subnav div.background-css-2 {
+header>nav div.nav-item ul.nav-subnav div.background-css-2 {
     position: absolute;
     background-color: #091A7A;
     left: 298px;
     top: 2px;
 }
-header > nav div.nav-item ul.nav-subnav div.background-css-2:before,
-header > nav div.nav-item ul.nav-subnav div.background-css-2:after {
-	content: '';
-	position: absolute;
-	background-color: inherit;
-}
-header > nav div.nav-item ul.nav-subnav div.background-css-2,
-header > nav div.nav-item ul.nav-subnav div.background-css-2:before,
-header > nav div.nav-item ul.nav-subnav div.background-css-2:after {
-	width:  31px;
-	height: 31px;
-	border-top-right-radius: 60%;
+
+header>nav div.nav-item ul.nav-subnav div.background-css-2:before,
+header>nav div.nav-item ul.nav-subnav div.background-css-2:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
 }
 
-header > nav div.nav-item ul.nav-subnav div.background-css-2 {
-	transform: rotate(-90deg) skewX(-30deg) scale(1,.866);
-}
-header > nav div.nav-item ul.nav-subnav div.background-css-2:before {
-	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
-}
-header > nav div.nav-item ul.nav-subnav div.background-css-2:after {
-	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+header>nav div.nav-item ul.nav-subnav div.background-css-2,
+header>nav div.nav-item ul.nav-subnav div.background-css-2:before,
+header>nav div.nav-item ul.nav-subnav div.background-css-2:after {
+    width: 31px;
+    height: 31px;
+    border-top-right-radius: 60%;
 }
 
-header > nav div.nav-item ul.nav-subnav div.background-css-3 {
+header>nav div.nav-item ul.nav-subnav div.background-css-2 {
+    transform: rotate(-90deg) skewX(-30deg) scale(1, .866);
+}
+
+header>nav div.nav-item ul.nav-subnav div.background-css-2:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+}
+
+header>nav div.nav-item ul.nav-subnav div.background-css-2:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+}
+
+header>nav div.nav-item ul.nav-subnav div.background-css-3 {
     position: absolute;
     width: 232px;
     height: 50px;
     left: 700px;
-
     background: #1939B7;
     border-radius: 0px 10px 10px 0px;
 }
 
-header > nav div.nav-item ul.nav-subnav label.decription {
+header>nav div.nav-item ul.nav-subnav label.decription {
     position: absolute;
     line-height: 50px;
     left: 0px;
@@ -186,7 +189,7 @@ header > nav div.nav-item ul.nav-subnav label.decription {
     font-size: 1.6rem;
 }
 
-header > nav div.nav-item ul.nav-subnav div.search-div-location {
+header>nav div.nav-item ul.nav-subnav div.search-div-location {
     height: 50px;
     position: absolute;
     line-height: 50px;
@@ -196,7 +199,7 @@ header > nav div.nav-item ul.nav-subnav div.search-div-location {
     color: white;
 }
 
-header > nav div.nav-item ul.nav-subnav div.search-div-location input[name='search-location'] {
+header>nav div.nav-item ul.nav-subnav div.search-div-location input[name='search-location'] {
     width: 300px;
     background: #0059FF;
     line-height: 1.6rem;
@@ -204,11 +207,11 @@ header > nav div.nav-item ul.nav-subnav div.search-div-location input[name='sear
     border-bottom: 2px solid white;
 }
 
-header > nav div.nav-item ul.nav-subnav div.search-div-location input[name='search-location']::placeholder {
+header>nav div.nav-item ul.nav-subnav div.search-div-location input[name='search-location']::placeholder {
     color: white;
 }
 
-header > nav div.nav-item ul.nav-subnav div.search-button-location {
+header>nav div.nav-item ul.nav-subnav div.search-button-location {
     height: 50px;
     position: absolute;
     left: 720px;
@@ -219,26 +222,26 @@ header > nav div.nav-item ul.nav-subnav div.search-button-location {
     text-transform: none;
 }
 
-header > nav div.nav-item ul.nav-subnav div.search-button-location svg{
+header>nav div.nav-item ul.nav-subnav div.search-button-location svg {
     margin-right: 15px;
 }
 
-header > nav div.nav-item ul.nav-subnav > li {
+header>nav div.nav-item ul.nav-subnav>li {
     line-height: 50px;
     position: relative;
     display: inline-block;
     margin-right: 80px;
 }
 
-header > nav div.nav-item ul.nav-subnav > li:last-child {
+header>nav div.nav-item ul.nav-subnav>li:last-child {
     margin-right: 0;
 }
 
-header > nav div.nav-item ul.nav-subnav li ul.subnav{
+header>nav div.nav-item ul.nav-subnav li ul.subnav {
     display: none;
 }
 
-header > nav div.nav-item ul.nav-subnav li:hover ul.subnav {
+header>nav div.nav-item ul.nav-subnav li:hover ul.subnav {
     display: block;
     list-style: none;
     position: absolute;
@@ -254,40 +257,55 @@ header > nav div.nav-item ul.nav-subnav li:hover ul.subnav {
     border-radius: 0px 0px 10px 10px;
 }
 
-header > nav div.nav-item ul.nav-subnav li ul.subnav li {
+header>nav div.nav-item ul.nav-subnav li ul.subnav li {
     padding: 12px 0;
 }
 
-header > nav div.nav-item ul.nav-subnav li ul.subnav li:hover {
+header>nav div.nav-item ul.nav-subnav li ul.subnav li:hover {
     text-decoration: underline;
 }
 
-header > nav div.hamburger-menu,
+header>nav div.hamburger-menu,
 #likeList,
 #account,
-header > nav div.nav-login svg:last-child,
-header > nav div.nav-login:hover svg:first-child {
+header>nav div.nav-login svg:last-child,
+header>nav div.nav-login:hover svg:first-child {
     display: none;
 }
 
-header > nav div.nav-login {
+header>nav div.nav-login {
     margin-left: 60px;
     position: relative;
 }
 
-header > nav div.nav-login:hover svg:last-child {
+header>nav div.nav-login:hover svg:last-child {
     display: block;
 }
 
-header > nav div.sub-account {
+header>nav div.nav-login div.sub-account {
     position: absolute;
     width: 124px;
     height: 89px;
-    left: 1058px;
-    top: 55px;
-
+    top: 32px;
+    left: -48px;
     background: #0059FF;
     border-radius: 0px 0px 20px 20px;
+    font-family: "NunitoSemiBold";
+    font-size: 1.6em;
+    color: white;
+    padding: 12px 0;
+    display: none;
+}
+
+header>nav div.nav-login div.sub-account div {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+
+header>nav div.nav-login div.sub-account div:hover {
+    background-color: #0047CC;
 }
 
 #likeList,
@@ -316,10 +334,9 @@ header > nav div.sub-account {
 }
 
 @media (max-width: 1080px) {
-    header > nav div.nav-item {
+    header>nav div.nav-item {
         font-size: 1.4em;
     }
-
     div.dropdown svg {
         height: 8px;
         margin-left: 5px;
@@ -328,12 +345,11 @@ header > nav div.sub-account {
 }
 
 @media (max-width: 991px) {
-    header > nav div.hamburger-menu {
+    header>nav div.hamburger-menu {
         display: flex;
         justify-content: flex-end;
     }
-
-    header > nav div.nav-menu:not(.hamburger-menu) {
+    header>nav div.nav-menu:not(.hamburger-menu) {
         display: none;
         flex-direction: column;
         align-items: flex-start;
@@ -344,24 +360,20 @@ header > nav div.sub-account {
         padding: 0 20px;
         background-color: white;
     }
-
-    header > nav div.nav-item {
+    header>nav div.nav-item {
         margin-left: 0px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-    }    
-
-    header > nav div.nav-item.adopt > div.header-title svg {
+    }
+    header>nav div.nav-item.adopt>div.header-title svg {
         display: none;
     }
-
-    header > nav div.nav-item:hover svg {
+    header>nav div.nav-item:hover svg {
         display: none;
     }
-
-    header > nav div.nav-item ul.nav-subnav {
+    header>nav div.nav-item ul.nav-subnav {
         position: relative;
         width: auto;
         left: auto;
@@ -372,25 +384,19 @@ header > nav div.sub-account {
         padding: 0;
         height: auto;
     }
-
-    header > nav div.nav-item ul.adopt {
+    header>nav div.nav-item ul.adopt {
         display: none;
     }
-
-    header > nav div.nav-item ul.nav-subnav li {
+    header>nav div.nav-item ul.nav-subnav li {
         display: block;
     }
-
-    header > nav div.nav-item ul.nav-subnav li:hover ul.subnav {
+    header>nav div.nav-item ul.nav-subnav li:hover ul.subnav {
         display: none;
     }
-
-
-    #nav-item-search > svg {
+    #nav-item-search>svg {
         display: none;
     }
-
-    header > nav div.nav-item div.search-input-article {
+    header>nav div.nav-item div.search-input-article {
         display: flex;
         align-items: center;
         border: 2px solid #091A7A;
@@ -400,19 +406,16 @@ header > nav div.sub-account {
         padding: 8px 8px;
         box-sizing: content-box;
     }
-
-    header > nav div.nav-item div.search-input-article input {
+    header>nav div.nav-item div.search-input-article input {
         flex-grow: 1;
         margin-right: 5px;
         border-bottom: 1px solid grey;
     }
-
-    header > nav div.nav-item div.search-input-article svg {
+    header>nav div.nav-item div.search-input-article svg {
         justify-self: flex-end;
         display: inline;
     }
-
-    header > nav div.nav-item div.search-input-article *:last-child {
+    header>nav div.nav-item div.search-input-article *:last-child {
         border-left: none;
     }
 }

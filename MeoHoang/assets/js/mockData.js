@@ -49,4 +49,17 @@ class User {
         }
         return {};
     }
+
+    changPassword(username, oldPassword, newPassword) {
+        for (var i = 0; i < users.length; i++) {
+            if (username == users[i]["username"]) {
+                if (oldPassword == users[i]["password"]) {
+                    users[i]["password"] = newPassword;
+                    return true;
+                }
+                else return false;
+            }
+        }
+        return false;
+    }
 }
