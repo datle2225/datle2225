@@ -315,24 +315,136 @@ header>nav div.nav-login div.sub-account div:hover {
     cursor: pointer;
 }
 
-.show {
-    display: block !important;
+#likeListResponsive,
+#likeListResponsive svg:last-child {
+    display: none;
 }
 
-.show-flex {
-    display: flex !important;
+div.modal-content {
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    max-width: 447px;
 }
 
-.hide {
-    display: none !important;
+div.modal-content div.modal-dismiss {
+    align-self: flex-end;
 }
 
-.blueBackground {
+div.modal-content div.modal-title {
+    font-family: "NunitoExtraBold";
+    font-size: 2.4em;
+    margin: 16px 0 23px;
+}
+
+div.modal-content form.modal-input-form div.modal-input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+div.modal-content form.modal-input-form div.modal-input-row:first-child {
+    margin: 0;
+}
+
+div.modal-content form.modal-input-form div.modal-input-row input {
+    flex-grow: 1;
+    border: 3px solid #393D46;
+    border-radius: 5px;
+    padding: 6px 11px;
+    font-size: 1.6em;
+    font-family: "NunitoSemiBold";
+}
+
+div.modal-content form.modal-input-form div.modal-input-row.largewidth input {
+    max-width: 175px;
+}
+
+div.modal-content form.modal-input-form div.modal-input-row.smallwidth input {
+    max-width: 150px;
+}
+
+div.modal-dismiss,
+div.modal-content form.modal-input-form div.modal-input-row img {
+    cursor: pointer;
+}
+
+div.modal-content form.modal-input-form div.modal-input-row img.showPass {
+    display: none;
+}
+
+div.modal-content form.modal-input-form p.warn {
+    display: none;
+    color: #F13E4B;
+    font-family: "NunitoSemiBold";
+    font-size: 1.4em;
+}
+
+div.modal-content input.modal-button {
+    background: #4586FF;
+    border-radius: 20px;
+    height: 42px;
+    width: 100%;
+    font-size: 1.6em;
+    font-family: "NunitoExtraBold";
+    color: white;
+    margin: 20px 0 30px;
+}
+
+div.modal-content div.modal-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.6em;
+    font-family: "NunitoSemiBold";
+}
+
+div.modal-content div.modal-notification {
+    align-self: center;
+    font-family: "NunitoExtraBold";
+    font-size: 1.6em;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+div.modal-content div.modal-welcome {
+    align-self: center;
+    text-align: center;
+    font-family: "NunitoExtraBold";
+    font-size: 2.2em;
+    line-height: 29px;
+    margin-bottom: 32px;
+    color: #0059FF;
+}
+
+div.modal-content div.modal-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+div.modal-content div.modal-cards div.modal-card {
+    cursor: pointer;
+}
+
+div.modal-content div.modal-cards div.modal-card div.modal-item-img {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+div.modal-content div.modal-cards div.modal-card div.modal-item-title {
+    border-radius: 0 0 20px 20px;
+    border: 3px solid #0059FF;
+    font-size: 1.4em;
+    text-align: center;
+    color: #0059FF;
+    font-family: "NunitoSemiBold";
+    padding: 9px;
+}
+
+div.modal-content div.modal-cards div.modal-card:hover div.modal-item-title {
     background-color: #0059FF;
-}
-
-.blueColor {
-    color: #254EDB !important;
+    color: white;
 }
 
 @media (max-width: 1080px) {
@@ -347,11 +459,15 @@ header>nav div.nav-login div.sub-account div:hover {
 }
 
 @media (max-width: 991px) {
-    header>nav div.hamburger-menu {
+    header>nav div.responsive-menu {
         display: flex;
-        justify-content: flex-end;
+        flex-grow: 0;
+        margin-left: 20px;
     }
-    header>nav div.nav-menu:not(.hamburger-menu) {
+    #likeListResponsive {
+        margin-left: auto;
+    }
+    header>nav div.nav-menu:not(.responsive-menu) {
         display: none;
         flex-direction: column;
         align-items: flex-start;
@@ -419,5 +535,11 @@ header>nav div.nav-login div.sub-account div:hover {
     }
     header>nav div.nav-item div.search-input-article *:last-child {
         border-left: none;
+    }
+    div.modal-content form.modal-input-form div.modal-input-row:first-child input {
+        width: 50%;
+    }
+    div.modal-content form.modal-input-form div.modal-input-row:nth-last-child(2) input {
+        width: 50%;
     }
 }

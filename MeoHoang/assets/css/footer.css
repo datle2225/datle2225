@@ -123,12 +123,4 @@ div.footer div.footer-item ul.list li:last-child {
     div.footer div.footer-item ul.list {
         display: none;
     }
-
-    .show {
-        display: block !important;
-    }
-
-    .hide {
-        display: none !important;
-    }
 }

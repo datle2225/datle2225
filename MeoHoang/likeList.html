@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/likeList.css">
+    <title>Mèo Hoang</title>
+</head>
+
+<body>
+    <div class="header"></div>
+    <section class="body">
+        <div class="body">
+            <section class="screenTitle">
+                <div class="likeListTitle">
+                    danh sách yêu thích (<span id="likeListAmount"></span>)
+                </div>
+                <div class="likeListSort">
+                    <div class="likeListSort-label">
+                        <div class="likeListSort-title">
+                            Sắp xếp theo
+                        </div>
+                        <svg class="likeListSort-svg" width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.70757 9.65876L0.330572 3.07599C-0.110191 2.62101 -0.110191 1.88529 0.330572 1.43514L1.39028 0.341239C1.83104 -0.113746 2.54376 -0.113746 2.97984 0.341239L7.5 5.00726L12.0202 0.341239C12.4609 -0.113746 13.1736 -0.113746 13.6097 0.341239L14.6694 1.43514C15.1102 1.89013 15.1102 2.62585 14.6694 3.07599L8.29244 9.65876C7.86105 10.1137 7.14833 10.1137 6.70757 9.65876V9.65876Z" fill="black"/>
+                        </svg>
+                        <svg class="likeListSort-svg" width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.70757 9.65876L0.330572 3.07599C-0.110191 2.62101 -0.110191 1.88529 0.330572 1.43514L1.39028 0.341239C1.83104 -0.113746 2.54376 -0.113746 2.97984 0.341239L7.5 5.00726L12.0202 0.341239C12.4609 -0.113746 13.1736 -0.113746 13.6097 0.341239L14.6694 1.43514C15.1102 1.89013 15.1102 2.62585 14.6694 3.07599L8.29244 9.65876C7.86105 10.1137 7.14833 10.1137 6.70757 9.65876Z" fill="#0059FF"/>
+                        </svg>    
+                        <div class="likeListValue">Yêu thích gần đây</div>
+                    </div>
+                    <div class="likeListValues">
+                        <div data-value="newestLike">Yêu thích gần đây</div>
+                        <div data-value="ascAlpha">Theo bảng chữ cái từ A - Z</div>
+                        <div data-value="descAlpha">Theo bảng chữ cái từ Z - A</div>
+                        <div data-value="oldest">Nhiều ngày trên Mèo Hoang</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="card-likeList">
+            <img src="assets/images/cats/Boss.png" alt="Ảnh mèo">
+            <div class="name">Boss</div>
+            <div class="info">
+                <span class="age">6 tháng</span> - <span class="gender">Đực</span><br />
+                <span class="breed">Mèo mun</span>
+            </div>
+
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/mockData.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/likeList.js"></script>
+</body>
+
+</html>
