@@ -269,7 +269,9 @@ header>nav div.hamburger-menu,
 #likeList,
 #account,
 header>nav div.nav-login svg:last-child,
-header>nav div.nav-login:hover svg:first-child {
+header>nav div.nav-login:hover svg:first-child,
+#changePasswordResponsive,
+#logoutResponsive {
     display: none;
 }
 

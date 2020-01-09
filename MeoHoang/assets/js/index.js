@@ -65,6 +65,14 @@ $("header").load("header.html nav", () => {
         $("div.nav-item[data-target='#signup']").show();
         $("div.nav-item[data-target='#login']").show();
     });
+
+    $("#logoutResponsive").on("click", () => {
+        sessionStorage.clear();
+        $("#likeList").hide();
+        $("#account").hide();
+        $("div.nav-item[data-target='#signup']").show();
+        $("div.nav-item[data-target='#login']").show();
+    });
 });
 
 // --- modal ---
@@ -146,8 +154,15 @@ $("#submit-login").on("click", () => {
 
             $("div.nav-item[data-target='#signup']").hide();
             $("div.nav-item[data-target='#login']").hide();
-            $("#likeList").show();
-            $("#account").show();
+            if ($(window).width() > 991) {
+                $("#likeList").show();
+                $("#account").show();
+            }
+            else {
+                $("#likeList").show();
+                $("#changePassResponsive").show();
+                $("#logoutResponsive").show();
+            }
         }
     }
 })
@@ -206,8 +221,15 @@ $("#submit-signup").on("click", () => {
 
         $("div.nav-item[data-target='#signup']").hide();
         $("div.nav-item[data-target='#login']").hide();
-        $("#likeList").show();
-        $("#account").show();
+        if ($(window).width() > 991) {
+            $("#likeList").show();
+            $("#account").show();
+        }
+        else {
+            $("#likeList").show();
+            $("#changePassResponsive").show();
+            $("#logoutResponsive").show();
+        }
     }
 });
 
