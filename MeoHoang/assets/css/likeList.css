@@ -3,7 +3,6 @@
 section.body {
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
@@ -11,6 +10,9 @@ section.body div.body {
     width: 1265px;
     padding: 0 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
 }
 
 section.body div.body section.screenTitle {
@@ -88,7 +90,75 @@ section.body div.body section.screenTitle div.likeListSort div.likeListValues di
     color: white;
 }
 
-/* section.body div.card- */
+section.body div.body div.card-likeList {
+    border-radius: 20px;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 78px;
+    margin-right: 22px;
+    position: relative;
+}
+
+section.body div.body div.card-likeList div.card-heart {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: white;
+    position: absolute;
+    left: 240px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+section.body div.body div.card-likeList div.card-heart svg {
+    cursor: pointer;
+}
+
+section.body div.body div.card-likeList img.avatar {
+    cursor: pointer;
+}
+
+section.body div.body div.card-likeList div.name {
+    font-size: 2.0em;
+    line-height: 24px;
+    color: #0059FF;
+    font-family: "NunitoExtraBold";
+    margin: 10px 0;
+}
+
+section.body div.body div.card-likeList div.info {
+    font-size: 1.4em;
+    line-height: 17px;
+    font-family: "NunitoSemiBold";
+    text-align: center;
+}
+
+section.body div.body div.card-likeList button.card-likeList-button {
+    font-size: 1.4em;
+    line-height: 17px;
+    background-color: white;
+    color: #0059FF;
+    font-family: "NunitoExtraBold";
+    padding: 10px 40px;
+    border-radius: 40px;
+    border: 2px solid #4586FF;
+    margin-top: 20px;
+}
+
+section.body div.body div.card-likeList img.avatar:hover ~ button.card-likeList-button,
+section.body div.body div.card-likeList button.card-likeList-button:hover {
+    background-color: #0059FF;
+    border: 0;
+    color: white;
+}
 
 .blueColor-likeList {
     color: #0059FF !important;
