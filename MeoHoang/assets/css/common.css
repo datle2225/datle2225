@@ -66,3 +66,7 @@ body {
 .redBorder {
     border-color: #F13E4B !important;
 }
+
+.redColor {
+    color: #F13E4B !important;
+}

@@ -1,5 +1,4 @@
 @import "./common.css";
-
 section.body {
     width: 100%;
     display: flex;
@@ -12,10 +11,12 @@ section.body div.body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
+    align-items: center;
 }
 
 section.body div.body section.screenTitle {
+    width: 100%;
     margin: 30px 0;
     display: flex;
     justify-content: space-between;
@@ -77,6 +78,7 @@ section.body div.body section.screenTitle div.likeListSort div.likeListValues {
     font-size: 1.8em;
     line-height: 24px;
     padding-bottom: 11px;
+    z-index: 50;
     display: none;
 }
 
@@ -90,27 +92,34 @@ section.body div.body section.screenTitle div.likeListSort div.likeListValues di
     color: white;
 }
 
-section.body div.body div.card-likeList {
+section.body div.body section.cards-likeList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+}
+
+section.body div.body section.cards-likeList div.card-likeList {
     border-radius: 20px;
-    width: 300px;
-    height: 450px;
+    width: 280px;
+    height: 455px;
     overflow: hidden;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 78px;
-    margin-right: 22px;
+    margin-bottom: 30px;
+    margin-right: 20px;
     position: relative;
 }
 
-section.body div.body div.card-likeList div.card-heart {
+section.body div.body section.cards-likeList div.card-likeList div.card-heart {
     width: 50px;
     height: 50px;
     border-radius: 50px;
     background-color: white;
     position: absolute;
-    left: 240px;
+    left: 220px;
     top: 10px;
     display: flex;
     justify-content: center;
@@ -118,15 +127,12 @@ section.body div.body div.card-likeList div.card-heart {
     cursor: pointer;
 }
 
-section.body div.body div.card-likeList div.card-heart svg {
+section.body div.body section.cards-likeList div.card-likeList div.card-heart svg,
+section.body div.body section.cards-likeList div.card-likeList img.avatar {
     cursor: pointer;
 }
 
-section.body div.body div.card-likeList img.avatar {
-    cursor: pointer;
-}
-
-section.body div.body div.card-likeList div.name {
+section.body div.body section.cards-likeList div.card-likeList div.name {
     font-size: 2.0em;
     line-height: 24px;
     color: #0059FF;
@@ -134,14 +140,14 @@ section.body div.body div.card-likeList div.name {
     margin: 10px 0;
 }
 
-section.body div.body div.card-likeList div.info {
+section.body div.body section.cards-likeList div.card-likeList div.info {
     font-size: 1.4em;
     line-height: 17px;
     font-family: "NunitoSemiBold";
     text-align: center;
 }
 
-section.body div.body div.card-likeList button.card-likeList-button {
+section.body div.body section.cards-likeList div.card-likeList button.card-likeList-button {
     font-size: 1.4em;
     line-height: 17px;
     background-color: white;
@@ -153,8 +159,8 @@ section.body div.body div.card-likeList button.card-likeList-button {
     margin-top: 20px;
 }
 
-section.body div.body div.card-likeList img.avatar:hover ~ button.card-likeList-button,
-section.body div.body div.card-likeList button.card-likeList-button:hover {
+section.body div.body section.cards-likeList div.card-likeList img.avatar:hover~button.card-likeList-button,
+section.body div.body section.cards-likeList div.card-likeList button.card-likeList-button:hover {
     background-color: #0059FF;
     border: 0;
     color: white;
@@ -165,16 +171,21 @@ section.body div.body div.card-likeList button.card-likeList-button:hover {
 }
 
 @media (max-width: 991px) {
-
     section.body div.body section.screenTitle {
         flex-direction: column;
         align-items: center;
     }
-
     section.body div.body section.screenTitle div.likeListTitle {
         font-size: 2.4em;
         line-height: 32px;
         margin-bottom: 12px;
     }
-
+    section.body div.body section.cards-likeList {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    section.body div.body section.cards-likeList div.card-likeList {
+        margin-right: 0;
+    }
 }

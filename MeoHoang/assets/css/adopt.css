@@ -1,0 +1,385 @@
+@import "./common.css";
+section.adopt-findPlace {
+    width: 100%;
+    background-color: #254EDB;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-bottom: 37px;
+}
+
+section.adopt-findPlace>div {
+    width: 1265px;
+    padding: 0 20px;
+}
+
+section.adopt-findPlace>div div.orientation {
+    font-size: 1.4em;
+    line-height: 17px;
+    font-family: "NunitoSemiBold";
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+section.adopt-findPlace>div div.orientation a,
+section.adopt-findPlace>div div.orientation a:focus,
+section.adopt-findPlace>div div.orientation a:hover,
+section.adopt-findPlace>div div.orientation a:active,
+section.adopt-findPlace>div div.orientation a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+section.adopt-findPlace>div div.orientation a {
+    border-bottom: 1px solid white;
+}
+
+section.adopt-findPlace>div div.orientation a:last-child {
+    border: 0;
+}
+
+section.adopt-findPlace>div div.findPlace {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+section.adopt-findPlace>div div.findPlace label.description svg {
+    margin-right: 8px;
+}
+
+section.adopt-findPlace>div div.findPlace label.description {
+    display: flex;
+    align-items: center;
+    font-size: 1.6em;
+    line-height: 19px;
+    text-transform: uppercase;
+    font-family: "NunitoExtraBold";
+    margin-bottom: 0;
+    margin-right: 8px;
+}
+
+section.adopt-findPlace>div div.findPlace div.findPlace-input {
+    width: 256px;
+    height: 50px;
+    background-color: #091A7A;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section.adopt-findPlace>div div.findPlace div.findPlace-input input {
+    width: 100%;
+    height: 46px;
+    background-color: #091A7A;
+    line-height: 46px;
+    font-size: 1.6em;
+    line-height: 19px;
+    font-family: "NunitoSemiBold";
+    padding: 0 7px;
+    color: white;
+}
+
+section.adopt-findPlace>div div.findPlace div.findPlace-input input::placeholder {
+    color: white;
+}
+
+section.adopt-findPlace>div div.findPlace button {
+    margin-left: 23px;
+    padding: 11px 46px;
+    background-color: #254EDB;
+    border: 3px solid white;
+    border-radius: 40px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    line-height: 17px;
+    font-family: "NunitoExtraBold";
+}
+
+section.adopt-findPlace>div div.findPlace button:hover {
+    background-color: white;
+    color: #254EDB;
+}
+
+section.adopt-findPlace>div div.findPlace button:focus {
+    outline: none;
+}
+
+section.adopt-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section.adopt-body>div {
+    width: 1265px;
+    padding: 0 20px;
+    display: flex;
+}
+
+section.adopt-body>div div.filter-button-responsive {
+    display: none;
+}
+
+section.adopt-body>div div.filter-adopt-menu {
+    margin-right: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item label {
+    font-size: 1.8em;
+    line-height: 19px;
+    text-transform: uppercase;
+    font-family: "NunitoExtraBold";
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-input {
+    padding: 15px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-input input {
+    margin-right: 10px;
+    flex-grow: 1;
+    font-size: 1.6em;
+    line-height: 19px;
+    font-family: "NunitoSemiBold";
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-input div.filter-adopt-dropdown {
+    width: 183px;
+    margin-right: 10px;
+    flex-grow: 1;
+    font-size: 1.6em;
+    line-height: 19px;
+    font-family: "NunitoSemiBold";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-input:not(.catName) div.symbol svg:last-child {
+    display: none;
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-dropdown-menu {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    padding: 10px 15px;
+    border: 1px solid #4586FF;
+    top: 65px;
+    z-index: 50;
+    flex-direction: column;
+    font-size: 1.6em;
+    line-height: 19px;
+    font-family: "NunitoSemiBold";
+    display: none;
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-dropdown-menu>div {
+    margin-bottom: 8px;
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-dropdown-menu div.filter-clear {
+    align-self: flex-end;
+    color: #0059FE;
+    border-bottom: 1px solid #0059FE;
+    cursor: pointer;
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-dropdown-menu div.filter-adopt-dropdown-item {
+    display: flex;
+    cursor: pointer;
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-dropdown-menu div.filter-adopt-dropdown-item div.filter-adopt-dropdown-value {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-dropdown-menu div.filter-adopt-dropdown-item div.symbol>div svg:last-child,
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-dropdown-menu div.filter-adopt-dropdown-item:hover div.symbol>div svg:first-child {
+    display: none;
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-dropdown-menu div.filter-adopt-dropdown-item:hover div.symbol>div svg:last-child {
+    display: inline;
+}
+
+section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-dropdown-menu div.filter-adopt-dropdown-item div.symbol div.symbol-remove {
+    display: none;
+}
+
+section.adopt-body>div div.cards-adopt {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.adopt-body>div div.cards-adopt div.card-adopt {
+    border-radius: 20px;
+    width: 280px;
+    height: 455px;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    position: relative;
+}
+
+section.adopt-body>div div.cards-adopt div.card-adopt div.card-heart {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: white;
+    position: absolute;
+    left: 220px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+section.adopt-body>div div.cards-adopt div.card-adopt div.card-heart svg,
+section.adopt-body>div div.cards-adopt div.card-adopt img.avatar {
+    cursor: pointer;
+}
+
+section.adopt-body>div div.cards-adopt div.card-adopt div.name {
+    font-size: 2.0em;
+    line-height: 24px;
+    color: #0059FF;
+    font-family: "NunitoExtraBold";
+    margin: 10px 0;
+}
+
+section.adopt-body>div div.cards-adopt div.card-adopt div.info {
+    font-size: 1.4em;
+    line-height: 17px;
+    font-family: "NunitoSemiBold";
+    text-align: center;
+}
+
+section.adopt-body>div div.cards-adopt div.card-adopt button.card-likeList-button {
+    font-size: 1.4em;
+    line-height: 17px;
+    background-color: white;
+    color: #0059FF;
+    font-family: "NunitoExtraBold";
+    padding: 10px 40px;
+    border-radius: 40px;
+    border: 2px solid #4586FF;
+    margin-top: 20px;
+}
+
+section.adopt-body>div div.cards-adopt div.card-adopt img.avatar:hover~button.card-likeList-button,
+section.adopt-body>div div.cards-adopt div.card-adopt button.card-likeList-button:hover {
+    background-color: #0059FF;
+    border: 0;
+    color: white;
+}
+
+.blueBorder-filter {
+    border-color: #0059FE !important;
+}
+
+@media (max-width: 991px) {
+    section.adopt-findPlace>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.adopt-findPlace>div div.findPlace {
+        flex-direction: column;
+        align-items: center;
+    }
+    section.adopt-findPlace>div div.findPlace label.description {
+        margin: 0;
+    }
+    section.adopt-findPlace>div div.findPlace div.findPlace-input {
+        margin: 16px 0;
+    }
+    section.adopt-findPlace>div div.findPlace button {
+        margin: 0;
+    }
+    section.adopt-body>div {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    section.adopt-body>div div.filter-button-responsive {
+        width: 280px;
+        background-color: white;
+        border: 3px solid #091A7A;
+        border-radius: 20px;
+        padding: 11px 15px;
+        margin-bottom: 20px;
+        display: block;
+    }
+    section.adopt-body>div div.filter-button-responsive>div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 1.6em;
+        line-height: 17px;
+        font-family: "NunitoExtraBold";
+    }
+    section.adopt-body>div div.filter-button-responsive>div div.description {
+        margin-left: 15px;
+    }
+    section.adopt-body>div div.filter-button-responsive div.filter-button-on {
+        color: white;
+        display: none;
+    }
+    section.adopt-body>div div.cards-adopt {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    section.adopt-body>div div.cards-adopt div.card-adopt {
+        margin-right: 0;
+    }
+    section.adopt-body>div div.filter-adopt-menu {
+        display: none;
+        padding: 30px 0;
+        width: 100%;
+        position: absolute;
+        z-index: 500;
+        background-color: #0059FF;
+        top: 65px;
+    }
+    section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item label {
+        color: white;
+    }
+    section.adopt-body>div div.filter-adopt-menu div.filter-adopt-item div.filter-adopt-dropdown-menu {
+        width: 240px;
+    }
+    .filter-button-blueBackground {
+        background-color: #091A7A !important;
+    }
+}

@@ -4,6 +4,39 @@
 $("div.header").load("header.html header", () => {
     // --- header ---
 
+    if ($(location).attr('href').includes("index.html")) {
+        $("div.nav-item.dropdown.adopt").removeClass("show");
+    } else {
+        $("div.nav-item.dropdown.adopt").addClass("show");
+    }
+
+    if (sessionStorage.getItem("username")) {
+        $("div.nav-item[data-target='#signup']").hide();
+        $("div.nav-item[data-target='#login']").hide();
+        if ($(window).width() > 991) {
+            $("#likeList").show();
+            $("#account").show();
+            if ($(location).attr('href').includes("likeList.html")) {
+                $("#likeList").children(":first-child").addClass("hide");
+                $("#likeList").children(":last-child").addClass("show");
+            } else {
+                $("#likeList").children(":first-child").removeClass("hide");
+                $("#likeList").children(":last-child").removeClass("show");
+            }
+        } else {
+            $("#likeListResponsive").addClass("show");
+            $("#changePasswordResponsive").show();
+            $("#logoutResponsive").show();
+            if ($(location).attr('href').includes("likeList.html")) {
+                $($("#likeListResponsive").children("svg")[0]).addClass("hide");
+                $($("#likeListResponsive").children("svg")[1]).addClass("show");
+            } else {
+                $($("#likeListResponsive").children("svg")[0]).removeClass("hide");
+                $($("#likeListResponsive").children("svg")[1]).removeClass("show");
+            }
+        }
+    };
+
     let deactiveIcon = $el => {
         $el.children(".header-title").children(".activeIcon").removeClass("show");
         $el.children(".header-title").children(".defaultIcon").removeClass("hide");
@@ -54,7 +87,7 @@ $("div.header").load("header.html header", () => {
     $("#likeList").on("click", () => {
         $("#likeList").children(":first-child").hide();
         $("#likeList").children(":last-child").show();
-        location.href = "modal.html";
+        location.href = "likeList.html";
     });
 
     $("#account").children("svg").on("click", () => {
@@ -69,6 +102,7 @@ $("div.header").load("header.html header", () => {
         $("#account").hide();
         $("div.nav-item[data-target='#signup']").show();
         $("div.nav-item[data-target='#login']").show();
+        location.href = "index.html";
     });
 
     $("#logoutResponsive").on("click", () => {
@@ -78,15 +112,17 @@ $("div.header").load("header.html header", () => {
         $("#logoutResponsive").hide();
         $("div.nav-item[data-target='#signup']").show();
         $("div.nav-item[data-target='#login']").show();
+        location.href = "index.html";
     });
 
     $("#likeListResponsive").on("click", () => {
-        $($("#likeListResponsive").children("svg")[0]).toggleClass("hide");
-        $($("#likeListResponsive").children("svg")[1]).toggleClass("show");
+        $($("#likeListResponsive").children("svg")[0]).addClass("hide");
+        $($("#likeListResponsive").children("svg")[1]).addClass("show");
+        location.href = "likeList.html";
     });
 
     //  --- modal ---
-    
+
     $("div.modal-input-row").children("input").each((_, el) => {
         $(el).on("blur", () => {
             if ($(el).val().trim()) {
@@ -168,9 +204,8 @@ $("div.header").load("header.html header", () => {
                 if ($(window).width() > 991) {
                     $("#likeList").show();
                     $("#account").show();
-                }
-                else {
-                    $("#likeListResponsive").show();
+                } else {
+                    // $("#likeListResponsive").show();
                     $("#changePasswordResponsive").show();
                     $("#logoutResponsive").show();
                 }
@@ -235,8 +270,7 @@ $("div.header").load("header.html header", () => {
             if ($(window).width() > 991) {
                 $("#likeList").show();
                 $("#account").show();
-            }
-            else {
+            } else {
                 $("#likeListResponsive").show();
                 $("#changePasswordResponsive").show();
                 $("#logoutResponsive").show();

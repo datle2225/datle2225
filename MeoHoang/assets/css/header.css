@@ -99,7 +99,7 @@ header>nav div.nav-item ul.nav-subnav.adopt {
 #nav-item-search-active {
     display: none;
     position: absolute;
-    width: 85%;
+    width: 96%;
     height: 124px;
     left: -175px;
     padding: 0 20px;
@@ -265,6 +265,10 @@ header>nav div.nav-item ul.nav-subnav li ul.subnav li:hover {
     text-decoration: underline;
 }
 
+header>nav div.nav-item.dropdown.adopt {
+    display: none;
+}
+
 header>nav div.hamburger-menu,
 #likeList,
 #account,
@@ -313,6 +317,10 @@ header>nav div.nav-login div.sub-account div:hover {
 #likeList,
 #account {
     cursor: pointer;
+}
+
+#likeList:hover svg:first-child {
+    display: none;
 }
 
 #likeListResponsive,
