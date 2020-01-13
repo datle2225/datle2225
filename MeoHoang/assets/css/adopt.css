@@ -296,6 +296,10 @@ section.adopt-body>div div.cards-adopt div.card-adopt button.card-likeList-butto
     margin-top: 20px;
 }
 
+section.adopt-body>div div.cards-adopt div.card-adopt div.card-heart svg:last-child {
+    display: none;
+}
+
 section.adopt-body>div div.cards-adopt div.card-adopt img.avatar:hover~button.card-likeList-button,
 section.adopt-body>div div.cards-adopt div.card-adopt button.card-likeList-button:hover {
     background-color: #0059FF;

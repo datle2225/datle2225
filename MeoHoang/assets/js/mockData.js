@@ -31,6 +31,7 @@ let cats = [{
             "Mồm kêu rất to khi bị bắt đi tắm hoặc bị đưa đi chơi",
             "Có sở thích ngắm đường phố và ngủ trong lòng chủ"
         ],
+        "color": "Đen",
         "joinedDate": "2019/04/22"
     },
     {
@@ -46,6 +47,7 @@ let cats = [{
             "Rất thích ăn sữa chua",
             "Đanh đá với các bạn mèo khác nhưng lại rất thích chơi với trẻ em"
         ],
+        "color": "Đen",
         "joinedDate": "2019/10/25"
     },
     {
@@ -57,6 +59,7 @@ let cats = [{
         "breed": "Mèo Ba Tư",
         "imagePath": "assets/images/cats/3.png",
         "about": [],
+        "color": "Trắng",
         "joinedDate": "2019/03/25"
     },
     {
@@ -68,6 +71,7 @@ let cats = [{
         "breed": "Mèo mướp",
         "imagePath": "assets/images/cats/4.png",
         "about": [],
+        "color": "Vàng",
         "joinedDate": "2019/09/23"
     },
     {
@@ -79,6 +83,7 @@ let cats = [{
         "breed": "Mèo Anh lông ngắn",
         "imagePath": "assets/images/cats/5.png",
         "about": [],
+        "color": "Đen",
         "joinedDate": "2019/09/24"
     },
     {
@@ -90,6 +95,7 @@ let cats = [{
         "breed": "Mèo Anh lông dài",
         "imagePath": "assets/images/cats/6.png",
         "about": [],
+        "color": "Nâu",
         "joinedDate": "2019/10/25"
     }
 ]
@@ -164,5 +170,81 @@ class Cat {
             result.push(this.getCatById(catId));
         }
         return result;
+    }
+
+    searchCatByName(name) {
+        var catList = [];
+        for (var i = 0; i < cats.length; i++) {
+            if (cats[i]["name"].toLowerCase().includes(name.toLowerCase())) catList.push(cats[i]);
+        }
+        return catList;
+    }
+
+    searchCatByNameInList(catList, name) {
+        var result = [];
+        for (var i = 0; i < catList.length; i++) {
+            if (catList[i]["name"].toLowerCase().includes(name.toLowerCase())) result.push(catList[i]);
+        }
+        return result;
+    }
+
+    searchCatByAgeInList(catList, age) {
+        var result = [];
+        for (var i = 0; i < catList.length; i++) {
+            for (let item of age) {
+                if (catList[i]["age"] == item) result.push(catList[i]);
+            }
+        }
+        return result;
+    }
+
+    searchCatByBreedInList(catList, breed) {
+        var result = [];
+        for (var i = 0; i < catList.length; i++) {
+            for (let item of breed) {
+                if (catList[i]["breed"] == item) result.push(catList[i]);
+            }
+        }
+        return result;
+    }
+
+    searchCatByGenderInList(catList, gender) {
+        var result = [];
+        for (var i = 0; i < catList.length; i++) {
+            for (let item of gender) {
+                if (catList[i]["gender"] == item) result.push(catList[i]);
+            }
+        }
+        return result;
+    }
+
+    searchCatByColorInList(catList, color) {
+        var result = [];
+        for (var i = 0; i < catList.length; i++) {
+            for (let item of color) {
+                if (catList[i]["color"] == item) result.push(catList[i]);
+            }
+        }
+        return result;
+    }
+
+    searchCat(data) {
+        var catList = this.getCats();
+        if (data.name) {
+            catList = this.searchCatByNameInList(catList, data.name.trim());
+        }
+        if (data.breed) {
+            catList = this.searchCatByAgeInList(catList, data.age);
+        }
+        if (data.age) {
+            catList = this.searchCatByBreedInList(catList, data.age);
+        }
+        if (data.gender) {
+            catList = this.searchCatByBreedInList(catList, data.age);
+        }
+        if (data.color) {
+            catList = this.searchCatByBreedInList(catList, data.color);
+        }
+        return catList;
     }
 }

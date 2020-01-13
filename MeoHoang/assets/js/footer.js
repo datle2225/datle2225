@@ -2,7 +2,6 @@
 
 $("footer").load("footer.html div.footer", () => {
     let deactiveArrow = $el => {
-        console.log($el.parent().siblings().children(".footer-item-arrow").children(".activeArrow"))
         $el.parent().siblings().children(".footer-item-arrow").children(".activeArrow").removeClass("show");
         $el.parent().siblings().children(".footer-item-arrow").children(".defaultArrow").removeClass("hide");
         $el.parent().siblings().children(".list").slideUp("fast");

@@ -167,7 +167,6 @@ $("div.header").load("header.html header", () => {
         var error = [true, true];
         var $username = $("div.modal-input-row").children("input[name = 'username']")[0];
         var $password = $("div.modal-input-row").children("input[name = 'password']")[0];
-        console.log($password);
 
         if ($($username).val().trim()) {
             $($username).val($($username).val().trim());

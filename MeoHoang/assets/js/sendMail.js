@@ -1,3 +1,42 @@
+// --- Assign global variable ---
+let catId = sessionStorage.getItem("catId");
+let catInfo = catId ? Cat.prototype.getCatById(Number.parseInt(catId)) : null;
+if (!catInfo) location.href = "index.html";
+
+// --- Gen introduce ---
+
+let about = listAbout => {
+    let result = "";
+    for (let item of listAbout) {
+        result += `
+            <li>
+                ${item}
+            </li>
+        `;
+    }
+    return result;
+}
+
+let introduce = cat => {
+    return `
+        <div class="avatar">
+            <img src="${cat.imagePath}" alt="Ảnh mèo - avatar">
+        </div>
+        <div class="information">
+            <div class="name">Nhận nuôi <span id="catName">${cat.name}</span></div>
+            <div class="info">
+                <span class="age">${cat.age}</span> - <span class="gender">${cat.gender}</span><br />
+                <span class="breed">${cat.breed}</span>
+            </div>
+        </div>
+        <ul class="about">
+            ${about(cat.about)}
+        </ul>
+    `
+}
+
+$("div.introduce").append(introduce(catInfo));
+
 // --- Submit ---
 
 let thanks = `

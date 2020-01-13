@@ -127,6 +127,10 @@ section.body div.body section.cards-likeList div.card-likeList div.card-heart {
     cursor: pointer;
 }
 
+section.body div.body section.cards-likeList div.card-likeList div.card-heart svg:last-child {
+    display: none;
+}
+
 section.body div.body section.cards-likeList div.card-likeList div.card-heart svg,
 section.body div.body section.cards-likeList div.card-likeList img.avatar {
     cursor: pointer;
