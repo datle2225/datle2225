@@ -100,6 +100,81 @@ let cats = [{
     }
 ]
 
+let articalSubMenus = [{
+        "menuTitle": "Nhận nuôi mèo",
+        "imgPath": "assets/images/articalMenu/catAdopt.png",
+        "descriptionTitle": "Danh sách kiểm tra trước khi nhận nuôi mèo",
+        "descriptionMore": "Suy nghĩ về việc nhận nuôi một con mèo? Tìm hiểu những gì cần xem xét để đảm bảo một gia đình yên bình và hạnh phúc.",
+        "subArticals": [
+            "Nhận nuôi mèo phù hợp với bạn",
+            "Một con mèo có giá bao nhiêu?",
+            "9 điều tâm linh về mèo thường gặp"
+        ]
+    },
+    {
+        "menuTitle": "NHỮNG MẨU CHUYỆN VUI KHI NHẬN NUÔI THÚ CƯNG",
+        "imgPath": "assets/images/articalMenu/funStories.png",
+        "descriptionTitle": "Đối với cặp vợ chồng yêu mèo này, hai tốt hơn một",
+        "descriptionMore": "Khi Mathé và Jordan đến thăm Cửa hàng thú cưng ở New York Animal Care and Control vào tháng 12 năm ngoái, họ biết rằng họ muốn có một con mèo, nhưng hai ư? Họ đã không ngờ đến điều đó.",
+        "subArticals": [
+            "Bella là một sự bổ sung hoàn hảo",
+            "Pony đã nhảy vào một cuộc sống và trái tim của một cặp đôi như thế nào?",
+            "Hitchcock đã có một câu chuyện mới"
+        ]
+    },
+    {
+        "menuTitle": "THÔNG TIN KHI NHẬN NUÔI THÚ",
+        "imgPath": "assets/images/articalMenu/adoptInfo.png",
+        "descriptionTitle": "Năm quan niệm sai lầm phổ biến về việc nhận nuôi thú cưng",
+        "descriptionMore": "Có rất nhiều điều bí mật và quan niệm sai lầm về việc nhận nuôi thú cưng. Chúng ta hãy cùng đi tìm hiểu sự thật nào.",
+        "subArticals": [
+            "Dự luật về quyền nhận thú nuôi",
+            "Làm thế nào để tôi khiếu nại về nơi trú ẩn hoặc nhóm cứu hộ?",
+            "Trước khi bạn phàn nàn về nơi trú ẩn động vật địa phương của bạn"
+        ]
+    }
+]
+
+let otherItems = [{
+        "imagePath": "assets/images/articalOtherItems/catCare.png",
+        "description": "Các bài viết về cách chăm sóc mèo"
+    },
+    {
+        "imagePath": "assets/images/articalOtherItems/hospital.png",
+        "description": "Các bài viết về các trung tâm cứu hộ"
+    },
+    {
+        "imagePath": "assets/images/articalOtherItems/video.png",
+        "description": "Thư viện video"
+    }
+]
+
+let articalsInfo = [{
+        "title": "Tại sao một số chú mèo lại thích nước?",
+        "imgPath": "assets/images/articalSubMenu/adopt/1.png",
+        "owner": "Petfinder",
+        "description": "Mèo nổi tiếng là ghét nước, nhưng bạn có biết rằng một số giống mèo thích bị ướt? Tìm hiểu những giống mèo đó, và tại sao. Con mèo của bạn có thích bị ướt không? Nói theo thống kê, có lẽ là không! Hầu hết những con mèo đều bị cuốn hút bởi nước chảy ngay cả khi chúng không muốn chơi trong nó - nhưng một số mèo không chỉ chịu đựng được nước, chúng ...",
+    },
+    {
+        "title": "Tên mèo ngọt ngào và dễ thương bạn chưa bao giờ nghe",
+        "imgPath": "assets/images/articalSubMenu/adopt/2.png",
+        "owner": "Petfinder",
+        "description": "Suy nghĩ về việc nhận nuôi một con mèo? Thử xem liệu một trong những tên mèo tuyệt vời này có thể là hoàn hảo cho thú cưng mới của bạn! Bạn đã sẵn sàng để nhận nuôi một con mèo mới? Có rất nhiều việc phải làm để đảm bảo bạn đã sẵn sàng, nhưng ít nhất là phải chọn được một cái tên đáng yêu cho mèo của bạn. Dưới đây là 20 chú mèo dễ thương và sáng tạo ...",
+    },
+    {
+        "title": "Giống mèo tốt nhất cho trẻ em",
+        "imgPath": "assets/images/articalSubMenu/adopt/3.png",
+        "owner": "Petfinder",
+        "description": "Tìm kiếm một giống mèo tuyệt vời cho trẻ em? Không gì ngoài những người bạn đồng hành vui tươi, tình cảm. Mèo là vật nuôi thích hợp cho các gia đình có trẻ em vì chúng ít phải kiểm soát và dễ chăm sóc. Tuy nhiên, bạn sẽ muốn xem xét lối sống của gia đình bạn để chọn giống mèo phù hợp. Các giống độc lập, ít năng lượng sẽ không thích hợp cho việc huấn luyện ...",
+    },
+    {
+        "title": "Tại sao người Ai Cập thờ mèo?",
+        "imgPath": "assets/images/articalSubMenu/adopt/4.png",
+        "owner": "Petfinder",
+        "description": "Bên cạnh việc là bạn đồng hành tuyệt vời, mèo có thể đã thực sự cứu nền văn minh khỏi nạn đói và bệnh tật. Hãy tưởng tượng bạn đang sống ở một nơi mà mọi ngôi nhà đều tấp nập với những con thú nhỏ bé, nguy hiểm. Một số mối đe dọa ẩn nấp ở mọi góc: rắn độc trốn trong lọ đất sét, chuột làm hỏng số lượng lớn hạt lưu trữ, bọ cạp độc bò dưới nôi. Trong thời gian và địa điểm này ...",
+    }
+]
+
 class User {
     getUsers() {
         return users;
@@ -246,5 +321,23 @@ class Cat {
             catList = this.searchCatByBreedInList(catList, data.color);
         }
         return catList;
+    }
+}
+
+class ArticalSubMenu {
+    getArticalSubMenus() {
+        return articalSubMenus;
+    }
+}
+
+class OtherItem {
+    getOtherItems() {
+        return otherItems;
+    }
+}
+
+class ArticalInfo {
+    getArticalsInfo() {
+        return articalsInfo;
     }
 }

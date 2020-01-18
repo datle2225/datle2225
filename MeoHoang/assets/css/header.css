@@ -83,7 +83,7 @@ header>nav div.nav-item ul.nav-subnav {
     position: absolute;
     width: 996px;
     height: 50px;
-    left: -200px;
+    left: -15px;
     top: 55px;
     background: #0059FF;
     border-radius: 10px;
@@ -92,7 +92,7 @@ header>nav div.nav-item ul.nav-subnav {
 }
 
 header>nav div.nav-item ul.nav-subnav.adopt {
-    left: -350px;
+    left: -160px;
     width: 916px;
 }
 
@@ -237,6 +237,10 @@ header>nav div.nav-item ul.nav-subnav>li:last-child {
     margin-right: 0;
 }
 
+header>nav div.nav-item ul.nav-subnav>li>a {
+    color: white;
+}
+
 header>nav div.nav-item ul.nav-subnav li ul.subnav {
     display: none;
 }
@@ -261,9 +265,14 @@ header>nav div.nav-item ul.nav-subnav li ul.subnav li {
     padding: 12px 0;
 }
 
-header>nav div.nav-item ul.nav-subnav li ul.subnav li:hover {
-    text-decoration: underline;
+header>nav div.nav-item ul.nav-subnav li ul.subnav li>a {
+    color: white;
 }
+
+
+/* header>nav div.nav-item ul.nav-subnav li ul.subnav li:hover {
+    text-decoration: underline;
+} */
 
 header>nav div.nav-item.dropdown.adopt {
     display: none;
@@ -486,6 +495,9 @@ div.modal-content div.modal-cards div.modal-card:hover div.modal-item-title {
         padding: 0 20px;
         background-color: white;
     }
+    header>nav div.nav-item:first-child {
+        padding-bottom: 0;
+    }
     header>nav div.nav-item {
         margin-left: 0px;
         display: flex;
@@ -518,6 +530,12 @@ div.modal-content div.modal-cards div.modal-card:hover div.modal-item-title {
     }
     header>nav div.nav-item ul.nav-subnav li:hover ul.subnav {
         display: none;
+    }
+    header>nav div.nav-item ul.nav-subnav li ul.subnav li>a {
+        color: white;
+    }
+    header>nav div.nav-item ul.nav-subnav>li>a {
+        color: #393E46;
     }
     #nav-item-search>svg {
         display: none;

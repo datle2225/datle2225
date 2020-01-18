@@ -45,7 +45,7 @@ let thanks = `
                 Cảm ơn bạn đã để lại thông tin<br /> Chúng tôi sẽ liên lạc ngay khi có thể
             </div>
             <div class="more">
-                Trong lúc đó hãy <a href="#">Xem thêm</a> các chú mèo khác nhé!
+                Trong lúc đó hãy <a href="adopt.html">Xem thêm</a> các chú mèo khác nhé!
             </div>
         </div>
     `
