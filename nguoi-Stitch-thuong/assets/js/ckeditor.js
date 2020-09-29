@@ -52,10 +52,11 @@ function makeData(element) {
 function makeFileName(title) {
     let filename = title ? title.toLowerCase().replace(' ', '-') : 'test';
     var currentDate = new Date();
+    var time = currentDate.getTime();
     var date = pad(currentDate.getDate());
     var month = pad(currentDate.getMonth() + 1); 
     var year = currentDate.getFullYear();
-    return `${date}-${month}-${year}-${filename}`
+    return `${date}-${month}-${year}-${time}-${filename}`
 }
 
 function pad(n) {
@@ -84,6 +85,9 @@ DecoupledEditor
             let login = window.prompt("Username: ");
             let password = window.prompt("Password: ");
             let token = btoa(`${login}:${password}`)
+            console.log(editor.data.get());
+            console.log(btoa(unescape(encodeURIComponent(editor.data.get()))))
+            
             let headers = {
                 Accept: 'application/vnd.github.v3+json',
                 Authorization: `Basic ${token}`
@@ -97,16 +101,19 @@ DecoupledEditor
 
             var data = {
                 "message": `Push file ${filename}.html`,
-                "content":  btoa(editor.data.get())
+                "content":  btoa(unescape(encodeURIComponent(editor.data.get())))
             }
 
             $.ajax({
                 type: "PUT",
                 url: `https://api.github.com/repos/datle2225/datle2225.github.io/contents/nguoi-Stitch-thuong/${filename}.html`,
-                data: "data",
+                data: JSON.stringify(data),
                 headers: headers,
                 success: function (response) {
-                    
+                    console.log(response);
+                    var newUrl = window.location.href.split('/');
+                    newUrl[newUrl.length - 1] = `${filename}.html`;
+                    window.location.href = newUrl.join('/');
                 }
             });
         });
