@@ -82,15 +82,17 @@ DecoupledEditor
         // } );
         $('form.editor').on( 'submit', event => {
             event.preventDefault();
-            let login = window.prompt("Username: ");
-            let password = window.prompt("Password: ");
-            let token = btoa(`${login}:${password}`)
+            // let login = window.prompt("Username: ");
+            // let password = window.prompt("Password: ");
+            let token = window.prompt("Token: ");
+            // let token = btoa(`${login}:${password}`)
             console.log(editor.data.get());
             console.log(btoa(unescape(encodeURIComponent(editor.data.get()))))
             
             let headers = {
                 Accept: 'application/vnd.github.v3+json',
-                Authorization: `Basic ${token}`
+                // Authorization: `Basic ${token}`
+                Authorization: `token ${token}`
             }
 
             var serialize = {}
