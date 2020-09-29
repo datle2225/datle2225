@@ -1,0 +1,33 @@
+form.editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form.editor div.editor {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #d2d2d2;
+    margin-bottom: 12px;
+}
+
+#editor {
+    background-color: white;
+}
+
+#submit {
+    display: none;
+}
+
+form.editor label.submit {
+    cursor: pointer;
+    padding: 7px 10px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+form.editor label.submit:hover {
+    color: white;
+    background-color: green;
+}
