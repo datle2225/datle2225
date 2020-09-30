@@ -114,7 +114,7 @@ DecoupledEditor
                 success: function (response) {
                     console.log(response);
                     var newUrl = window.location.href.split('/');
-                    newUrl[newUrl.length - 1] = `${filename}.html`;
+                    newUrl[newUrl.length - 1] = `articles/${filename}.html`;
                     window.location.href = newUrl.join('/');
                 }
             });
