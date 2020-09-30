@@ -83,8 +83,6 @@ DecoupledEditor
             // let password = window.prompt("Password: ");
             // let token = btoa(`${login}:${password}`);
             let token = window.prompt("Token: ");
-            console.log(editor.data.get());
-            console.log(btoa(unescape(encodeURIComponent(editor.data.get()))))
             
             let headers = {
                 Accept: 'application/vnd.github.v3+json',
@@ -96,17 +94,35 @@ DecoupledEditor
             $(event.target).serializeArray().forEach(prop => {
                 serialize[prop.name] = prop.value;
             })
-            let filename = makeFileName(serialize.title);
 
-            var data = {
-                "message": `Push file ${filename}.html`,
-                "content":  btoa(unescape(encodeURIComponent(editor.data.get())))
-            }
+            let filename = makeFileName(serialize.title);
+            
+            var image = $("#image")[0].files[0];
+            var extension = image.type.split('/').slice(-1)[0];
+            var fr = new FileReader();
+            fr.readAsDataURL(image);
+            fr.onload = () => {
+                $.ajax({
+                    type: "PUT",
+                    url: `https://api.github.com/repos/datle2225/datle2225.github.io/contents/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/${filename}.${extension}`,
+                    data: JSON.stringify({
+                        "message": `Push image ${filename}.${extension}`,
+                        "content":  fr.result.split(',').slice(-1)[0]
+                    }),
+                    headers: headers,
+                    success: function (response) {
+                        console.log(response);
+                    }
+                });
+            };
 
             $.ajax({
                 type: "PUT",
                 url: `https://api.github.com/repos/datle2225/datle2225.github.io/contents/${CONSTANT.FOLDER}/${CONSTANT.ARTICLES_PATH}/${filename}.html`,
-                data: JSON.stringify(data),
+                data: JSON.stringify({
+                    "message": `Push article ${filename}`,
+                    "content":  btoa(unescape(encodeURIComponent(editor.data.get())))
+                }),
                 headers: headers,
                 success: function (response) {
                     console.log(response);
