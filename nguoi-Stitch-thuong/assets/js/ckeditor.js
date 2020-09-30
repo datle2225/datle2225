@@ -72,20 +72,17 @@ DecoupledEditor
     .then( editor => {
         const toolbarContainer = document.querySelector( '#toolbar-container' );
         toolbarContainer.appendChild( editor.ui.view.toolbar.element );
-        
-        // $('.button').on('click', () => {
-        //     console.log('submit')
-        //     console.log(btoa(editor.data.get()))
-        // })
+
         // editor.model.document.on( 'change:data', () => {
         //     console.log( 'The data has changed!' );
         // } );
+
         $('form.editor').on( 'submit', event => {
             event.preventDefault();
             // let login = window.prompt("Username: ");
             // let password = window.prompt("Password: ");
+            // let token = btoa(`${login}:${password}`);
             let token = window.prompt("Token: ");
-            // let token = btoa(`${login}:${password}`)
             console.log(editor.data.get());
             console.log(btoa(unescape(encodeURIComponent(editor.data.get()))))
             
@@ -108,7 +105,7 @@ DecoupledEditor
 
             $.ajax({
                 type: "PUT",
-                url: `https://api.github.com/repos/datle2225/datle2225.github.io/contents/nguoi-Stitch-thuong/${filename}.html`,
+                url: `https://api.github.com/repos/datle2225/datle2225.github.io/contents/nguoi-Stitch-thuong/articles/${filename}.html`,
                 data: JSON.stringify(data),
                 headers: headers,
                 success: function (response) {
