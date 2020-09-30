@@ -105,13 +105,13 @@ DecoupledEditor
 
             $.ajax({
                 type: "PUT",
-                url: `https://api.github.com/repos/datle2225/datle2225.github.io/contents/nguoi-Stitch-thuong/articles/${filename}.html`,
+                url: `https://api.github.com/repos/datle2225/datle2225.github.io/contents/${CONSTANT.FOLDER}/${CONSTANT.ARTICLES_PATH}/${filename}.html`,
                 data: JSON.stringify(data),
                 headers: headers,
                 success: function (response) {
                     console.log(response);
                     var newUrl = window.location.href.split('/');
-                    newUrl[newUrl.length - 1] = `articles/${filename}.html`;
+                    newUrl[newUrl.length - 1] = `${CONSTANT.ARTICLES_PATH}/${filename}.html`;
                     window.location.href = newUrl.join('/');
                 }
             });
