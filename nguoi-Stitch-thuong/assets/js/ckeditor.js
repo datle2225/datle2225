@@ -50,7 +50,7 @@ function makeData(element) {
 }
 
 function makeFileName(title) {
-    let filename = title ? title.toLowerCase().replace(' ', '-') : 'test';
+    let filename = title ? title.toLowerCase().replaceAll(' ', '-') : 'test';
     var currentDate = new Date();
     var date = pad(currentDate.getDate());
     var month = pad(currentDate.getMonth() + 1); 
