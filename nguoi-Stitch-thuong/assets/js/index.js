@@ -14,7 +14,7 @@ $.ajax({
             var title = toFirstLetterUpperCase(link.replaceAll('-', ' ').slice(0, -5));
             articles += `
                 <div style="margin: 5px 0;">
-                    <a href='${CONSTANT.ARTICLES_PATH}/${link}'>${title}</a>
+                    <a href='${CONSTANT.ARTICLES_PATH}/${article.path}'>${title}</a>
                     <p>Được viết ngày ${info[0]}-${info[1]}-${info[2]}</p>
                 </div>
             `;
