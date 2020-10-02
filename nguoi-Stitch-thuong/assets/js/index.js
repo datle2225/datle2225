@@ -26,15 +26,14 @@ $.ajax({
             },
             url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/git/trees/${CONSTANT.BRANCH}:${CONSTANT.FOLDER}/${CONSTANT.ARTICLES_PATH}`,
             success: function (response) {
-                console.log(response.tree);
+                var tree = UTILS.sortByDate(response.tree);
                 var articles = '';
-                for (let article of response.tree) {
+                for (let article of tree) {
                     var info = article.path.split('-');
                     var link = info.slice(4).join('-');
                     var title = toFirstLetterUpperCase(link.replaceAll('-', ' ').slice(0, -5));
         
                     var imageName = `${article.path.slice(0, -5)}.png`;
-                    console.log(imageName);
                     if (images.includes(imageName)) {
                         articles += `
                             <div class="article">

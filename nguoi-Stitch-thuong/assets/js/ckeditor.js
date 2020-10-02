@@ -112,23 +112,23 @@ DecoupledEditor
                     headers: headers,
                     success: function (response) {
                         console.log(response);
+                        $.ajax({
+                            type: "PUT",
+                            url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/contents/${CONSTANT.FOLDER}/${CONSTANT.ARTICLES_PATH}/${filename}.html`,
+                            data: JSON.stringify({
+                                "message": `Push article ${filename}`,
+                                "content":  btoa(unescape(encodeURIComponent(editor.data.get())))
+                            }),
+                            headers: headers,
+                            success: function (response) {
+                                console.log(response);
+                                window.location.href = '.';
+                            }
+                        });
                     }
                 });
             };
 
-            $.ajax({
-                type: "PUT",
-                url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/contents/${CONSTANT.FOLDER}/${CONSTANT.ARTICLES_PATH}/${filename}.html`,
-                data: JSON.stringify({
-                    "message": `Push article ${filename}`,
-                    "content":  btoa(unescape(encodeURIComponent(editor.data.get())))
-                }),
-                headers: headers,
-                success: function (response) {
-                    console.log(response);
-                    window.location.href = '';
-                }
-            });
         });
     } )
     .catch( error => {
