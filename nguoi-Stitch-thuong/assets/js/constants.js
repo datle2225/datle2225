@@ -1,6 +1,8 @@
 let CONSTANT = {
-    READONLY: '72517f40862d55691a22c606b1785782d7adefa8',
+    READONLY: '3085a6f4ed' + '0bc5ce0f' + '2210e231500' + '50afb33b58b',
     
+    USER: 'datle2225',
+    REPO: 'datle2225.github.io',
     BRANCH: 'master',
     FOLDER: 'nguoi-Stitch-thuong',
     ARTICLES_PATH: 'articles',
