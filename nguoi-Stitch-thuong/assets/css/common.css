@@ -21,6 +21,13 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Sriracha';
+    src: url('../fonts/Sriracha-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -38,8 +45,8 @@ html {
 
 body {
     background-color: #ECECEC;
-    font-size: 1.4rem;
-    font-family: "NunitoBold";
+    font-size: 1.5rem;
+    font-family: "NunitoSemiBold";
 }
 
 .show {

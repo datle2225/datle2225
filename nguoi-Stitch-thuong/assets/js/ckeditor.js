@@ -53,14 +53,7 @@ function makeFileName(title) {
     let filename = title ? title.toLowerCase().replaceAll(' ', '-') : 'test';
     var currentDate = new Date();
     var time = currentDate.getTime();
-    var date = pad(currentDate.getDate());
-    var month = pad(currentDate.getMonth() + 1); 
-    var year = currentDate.getFullYear();
-    return `${date}-${month}-${year}-${time}-${filename}`
-}
-
-function pad(n) {
-    return n<10 ? '0'+n : n;
+    return `${time}-${filename}`
 }
 
 DecoupledEditor

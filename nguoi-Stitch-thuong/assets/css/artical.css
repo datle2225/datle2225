@@ -1,43 +1,4 @@
 @import "./common.css";
-
-section.banner {
-    height: 450px;
-    width: 100%;
-    background-image: url('../images/header-background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-section.banner div.header {
-    height: auto;
-}
-
-section.banner div.header nav a .logo {
-    padding: 20px 0 0;
-    height: 190px;
-}
-
-section.banner div.quote {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: Sriracha;
-}
-
-section.banner div.quote div.title {
-    font-size: 6rem;
-}
-
-section.banner div.quote div.description {
-    font-size: 3.2rem;
-}
-
 section.body {
     width: 100%;
     display: flex;
@@ -45,63 +6,80 @@ section.body {
     margin: 35px 0;
 }
 
-section.body div.body {
+section.body>div {
     width: 1265px;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    gap: 10px;
 }
 
-section.body div.body div.main {
-    background-color: white;
-    padding: 29px 200px 50px;
-    border-radius: 10px;
-    line-height: 19px;
-    flex-grow: 1;
+section.body>div section.main {
+    display: flex;
+    flex-direction: column;
 }
 
-section.body div.body div.sub {
+section.body>div section.main-artical {
     background-color: white;
-    padding: 29px 32px 30px 29px;
+    padding: 29px 32px 50px 29px;
     border-radius: 10px;
     font-family: "NunitoSemiBold";
     font-size: 1.4em;
-    width: 300px;
+    line-height: 19px;
+    margin-right: 5px;
+    max-width: 900px;
 }
 
-#articles {
+section.body>div section.main-artical div.orientation a,
+section.body>div section.main-artical div.orientation a:hover,
+section.body>div section.main-artical div.orientation a:active,
+section.body>div section.main-artical div.orientation a:visited {
+    color: #0058FD;
+    text-decoration: none;
+}
+
+section.body>div section.main-artical div.orientation a {
+    border-bottom: 1px solid #0058FD;
+    font-family: "NunitoExtraBold";
+}
+
+section.body>div section.main-artical div.artical-title {
+    font-size: 2.4em;
+    line-height: 36px;
+    font-family: "NunitoExtraBold";
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+section.body>div section.main-artical div.artical-owner {
+    font-family: "NunitoExtraBold";
+    margin-bottom: 12px;
+}
+
+section.body>div section.main-artical div.artical-description {
+    margin-bottom: 12px;
+}
+
+section.body>div section.main-artical div.artical-content {
     display: flex;
     flex-direction: column;
 }
 
-#articles div.article {
-    box-sizing: content-box;
-    padding: 40px 0;
-    display: flex; 
-    gap: 12px;
-    font-family: NunitoBold;
-    border-bottom: 1px solid #393E46;
+section.body>div section.main-artical div.artical-content p {
+    text-align: justify;
 }
 
-#articles div.article img {
-    max-height: 120px;
-    border-radius: 10px;
+section.body>div section.main-artical div.artical-content h1 {
+    font-size: 1.8em;
+    font-family: "NunitoExtraBold";
+    margin-top: 20px;
 }
 
-#articles div.article div.info {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    justify-content: center;
+section.body>div section.main-artical div.artical-content iframe {
+    align-self: center;
+    margin: 20px 0;
 }
 
-#articles div.article div.info a {
-    font-size: 3rem;
-    line-height: 35px;
-}
-
-/* section.body>div section.sub-artical {
+section.body>div section.sub-artical {
     background-color: white;
     padding: 29px 32px 30px 29px;
     border-radius: 10px;
@@ -287,4 +265,4 @@ section.body>div section.side div.other div.other-menu div.other-item div.other-
         margin: 10px 0 16px 0;
         max-width: 100%;
     }
-} */
+}
