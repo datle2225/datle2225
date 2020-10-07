@@ -17,11 +17,9 @@ $.ajax({
     },
     url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/git/trees/${CONSTANT.BRANCH}:${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}`,
     success: function (response) {
-        console.log(response.tree);
         for (let image of response.tree) {
             images.push(image.path);
         }
-        console.log(images)
         $.ajax({
             type: "GET",
             headers: {
