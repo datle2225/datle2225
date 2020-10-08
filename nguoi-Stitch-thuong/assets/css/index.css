@@ -38,37 +38,8 @@ section.banner div.quote div.description {
     font-size: 3.2rem;
 }
 
-section.body {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 35px 0;
-}
-
-section.body div.body {
-    width: 1265px;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
 section.body div.body div.main {
-    background-color: white;
     padding: 29px 200px 50px;
-    border-radius: 10px;
-    line-height: 19px;
-    flex-grow: 1;
-    min-width: 411px;
-}
-
-section.body div.body div.sub {
-    background-color: white;
-    padding: 29px 32px 30px 29px;
-    border-radius: 10px;
-    font-family: "NunitoSemiBold";
-    font-size: 1.4em;
-    max-width: 300px;
 }
 
 #articles {

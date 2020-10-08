@@ -1,13 +1,5 @@
 let images = [];
 
-function toFirstLetterUpperCase(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-function pad(n) {
-    return n<10 ? '0'+n : n;
-}
-
 $.ajax({
     type: "GET",
     headers: {
@@ -34,19 +26,19 @@ $.ajax({
                 for (let article of tree) {
                     var info = article.path.split('-');
 
-                    var datetime = new Date(parseInt(info[0]))
-                    datetime = `${pad(datetime.getDate())}-${pad(datetime.getMonth() + 1)}-${datetime.getFullYear()}`
+                    var datetime = UTILS.toDatetime(parseInt(info[0])).join('-');
 
-                    var link = info.slice(1).join('-');
-                    var title = toFirstLetterUpperCase(link.replaceAll('-', ' ').slice(0, -5));
+                    var title = UTILS.toFirstLetterUpperCase(info.slice(1).join(' ').slice(0, -5));
         
                     var imageName = `${article.path.slice(0, -5)}.png`;
                     if (images.includes(imageName)) {
                         articles += `
                             <div class="article">
-                                <img src="https://${CONSTANT.REPO}/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/${imageName}" alt="article-image"/>
+                                <a href='article.html?article=${article.path}'>
+                                    <img src="https://${CONSTANT.REPO}/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/${imageName}" alt="article-image"/>
+                                </a>
                                 <div class="info">
-                                    <a href='${CONSTANT.ARTICLES_PATH}/${article.path}'>${title}</a>
+                                    <a href='article.html?article=${article.path}'>${title}</a>
                                     <p>Được viết ngày ${datetime}</p>
                                 </div>
                             </div>
@@ -55,9 +47,11 @@ $.ajax({
                     else {
                         articles += `
                             <div class="article">
-                                <img src="https://${CONSTANT.REPO}/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/default.png" alt="article-image"/>
+                                <a href='article.html?article=${article.path}'>
+                                    <img src="https://${CONSTANT.REPO}/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/default.png" alt="article-image"/>
+                                </a>
                                 <div class="info">
-                                    <a href='${CONSTANT.ARTICLES_PATH}/${article.path}'>${title}</a>
+                                    <a href='article.html?article=${article.path}'>${title}</a>
                                     <p>Được viết ngày ${datetime}</p>
                                 </div>
                             </div>
