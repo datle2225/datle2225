@@ -80,7 +80,7 @@ function genPagination() {
 
 function genArticles() {
     var articles = '';
-    if (!totalPages) {
+    if (!tree.length) {
         articles = `
             <div class="notification">
                 <p>
@@ -96,7 +96,6 @@ function genArticles() {
     else {
         var startIndex = (currentPage - 1) * count;
         var endIndex = Math.min(tree.length, startIndex + count);
-        console.log(startIndex, endIndex)
         for (let article of tree.slice(startIndex, endIndex)) {
             var info = article.path.split('-');
     
@@ -172,8 +171,10 @@ function init() {
                 },
                 url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/git/trees/${CONSTANT.BRANCH}:${CONSTANT.FOLDER}/${CONSTANT.ARTICLES_PATH}`,
                 success: function (response) {
-                    tree = UTILS.sortByDate(response.tree);
+                    tree = response.tree.filter(file => file.path != ".gitkeep");
+                    tree = UTILS.sortByDate(tree);
                     totalPages = Math.ceil(tree.length / count);
+                    totalPages = totalPages ? totalPages : 1;
                     regist();
                 }
             });
