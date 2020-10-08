@@ -40,6 +40,9 @@ section.banner div.quote div.description {
 
 section.body div.body div.main {
     padding: 29px 200px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
 }
 
 #articles {
@@ -73,6 +76,86 @@ section.body div.body div.main {
     line-height: 35px;
 }
 
+#articles div.notification {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+section.body div.body div.main div.pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.body div.body div.main div.pagination [class|="pagination-button"] {
+    border: 3px solid #0059FF;
+    border-radius: 10px;
+    width: 135px;
+    height: 50px;
+    text-transform: uppercase;
+    background-color: white;
+    color: #0059FF;
+    font-family: "NunitoExtraBold";
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+section.body div.body div.main div.pagination div.pagination-button-next:hover,
+section.body div.body div.main div.pagination div.pagination-button-back:hover {
+    background-color: #0059FF;
+    color: white;
+}
+
+section.body div.body div.main div.pagination [class|="pagination-button"] div.button-name {
+    margin-top: 2px;
+}
+
+section.body div.body div.main div.pagination div[class|="pagination-button"] svg:last-of-type,
+section.body div.body div.main div.pagination div[class|="pagination-button"]:hover svg:first-of-type {
+    display: none;
+}
+
+section.body div.body div.main div.pagination div[class|="pagination-button"]:hover svg:last-of-type {
+    display: block;
+}
+
+section.body div.body div.main div.pagination div.pagination-button-blank {
+    border: none;
+    background: none;
+    cursor: default;
+}
+
+section.body div.body div.main div.pagination label.pagination-button {
+    width: auto;
+    gap: 0;
+    padding: 0 10px;
+}
+
+section.body div.body div.main div.pagination label.pagination-button input {
+    width: 40px;
+    background-color: #0059FF;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 7px;
+}
+
+@media (max-width: 1254px) {
+    section.body div.body div.main div.pagination div[class|="pagination-button"] {
+        width: 80px;
+    }
+
+    section.body div.body div.main div.pagination div[class|="pagination-button"] div.button-name {
+        display: none;
+    }
+}
+
 @media (max-width: 1080px) {
     section.banner {
         height: 380px;
@@ -100,8 +183,35 @@ section.body div.body div.main {
         display: none;
     }
 
-    #articles div.article {
+    #articles div.article,
+    section.body div.body div.main div.pagination {
         margin: 0 40px;
+    }
+
+    section.body div.body div.main div.pagination [class|="pagination-button"] {
+        font-size: 1.4rem;
+    }
+
+    section.body div.body div.main div.pagination div[class|="pagination-button"] {
+        width: 110px;
+    }
+
+    section.body div.body div.main div.pagination div[class|="pagination-button"] div.button-name {
+        display: block;
+    }
+
+    section.body div.body div.main div.pagination label.pagination-button input {
+        width: 30px;
+    }
+}
+
+@media (max-width: 711px) {
+    section.body div.body div.main div.pagination div[class|="pagination-button"] div.button-name {
+        display: none;
+    }
+
+    section.body div.body div.main div.pagination div[class|="pagination-button"] {
+        width: 50px;
     }
 }
 
@@ -117,5 +227,15 @@ section.body div.body div.main {
     section.body div.body div.main {
         padding: 20px 0 50px;
         min-width: unset;
+    }
+}
+
+@media (max-width: 384px) {
+    section.body div.body div.main div.pagination label.pagination-button {
+        padding: 0 5px;
+    }
+
+    section.body div.body div.main div.pagination label.pagination-button div.name {
+        display: none;
     }
 }

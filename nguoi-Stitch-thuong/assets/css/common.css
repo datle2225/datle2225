@@ -61,24 +61,21 @@ body {
     display: flex !important;
 }
 
-.blueBackground {
-    background-color: #0059FF;
+.notification {
+    font-family: NunitoBold;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 36px;
 }
 
-.blueColor-header {
-    color: #254EDB !important;
+/* Remove arrow in number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
-
-.greenBorder {
-    border-color: #B2D430 !important;
-}
-
-.redBorder {
-    border-color: #F13E4B !important;
-}
-
-.redColor {
-    color: #F13E4B !important;
+input[type=number] {
+    -moz-appearance: textfield !important;
 }
 
 section.body {
