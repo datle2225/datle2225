@@ -1,13 +1,13 @@
 // define global variables
 let images = [];
 let currentPage = 1;
-let totalPages = 2;
-let count = 2;
+let totalPages = 1;
+let count = 6;
 let tree = [];
 
 // define function
-function paging(event) {
-    window.history.pushState(null, '', `.?page=${currentPage+$(event.currentTarget).data('button')}`);
+function paging(page) {
+    window.history.pushState(null, '', `.?page=${page}`);
 }
 
 function genPagination() {
@@ -67,7 +67,12 @@ function genPagination() {
         
         $("#pagination").html(pagination);
         $("div[class|='pagination-button']").on("click", event => {
-            paging(event);
+            paging(currentPage+$(event.currentTarget).data('button'));
+            regist();
+        });
+        $(".paging-input").on("submit", event => {
+            event.preventDefault();
+            paging($("#paging-input").val());
             regist();
         });
     }
@@ -139,7 +144,8 @@ function regist() {
         window.location.replace('.?page=1');
     }
     else {
-        init();
+        genArticles();
+        genPagination();
     }
 }
 
@@ -167,9 +173,8 @@ function init() {
                 url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/git/trees/${CONSTANT.BRANCH}:${CONSTANT.FOLDER}/${CONSTANT.ARTICLES_PATH}`,
                 success: function (response) {
                     tree = UTILS.sortByDate(response.tree);
-                    totalPages = Math.round(tree.length / count);
-                    genArticles();
-                    genPagination();
+                    totalPages = Math.ceil(tree.length / count);
+                    regist();
                 }
             });
         }
@@ -178,4 +183,4 @@ function init() {
 }
 
 // run js
-regist();
+init();
