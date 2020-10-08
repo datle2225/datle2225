@@ -56,6 +56,22 @@ function makeFileName(title) {
     return `${time}-${filename}`
 }
 
+function saveFile(headers, filename, text) {
+    $.ajax({
+        type: "PUT",
+        url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/contents/${CONSTANT.FOLDER}/${CONSTANT.ARTICLES_PATH}/${filename}.html`,
+        data: JSON.stringify({
+            "message": `Push article ${filename}`,
+            "content":  btoa(unescape(encodeURIComponent(text)))
+        }),
+        headers: headers,
+        success: function (response) {
+            console.log(response);
+            window.location.href = '.';
+        }
+    });
+}
+
 DecoupledEditor
     .create( document.querySelector( '#editor' ), {
         extraPlugins: [ UploadAdapterPlugin ],
@@ -91,36 +107,29 @@ DecoupledEditor
             let filename = makeFileName(serialize.title);
             
             var image = $("#image")[0].files[0];
-            var extension = image.type.split('/').slice(-1)[0];
-            var fr = new FileReader();
-            fr.readAsDataURL(image);
-            fr.onload = () => {
-                $.ajax({
-                    type: "PUT",
-                    url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/contents/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/${filename}.${extension}`,
-                    data: JSON.stringify({
-                        "message": `Push image ${filename}.${extension}`,
-                        "content":  fr.result.split(',').slice(-1)[0]
-                    }),
-                    headers: headers,
-                    success: function (response) {
-                        console.log(response);
-                        $.ajax({
-                            type: "PUT",
-                            url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/contents/${CONSTANT.FOLDER}/${CONSTANT.ARTICLES_PATH}/${filename}.html`,
-                            data: JSON.stringify({
-                                "message": `Push article ${filename}`,
-                                "content":  btoa(unescape(encodeURIComponent(editor.data.get())))
-                            }),
-                            headers: headers,
-                            success: function (response) {
-                                console.log(response);
-                                window.location.href = '.';
-                            }
-                        });
-                    }
-                });
-            };
+            if (image) {
+                var extension = image.type.split('/').slice(-1)[0];
+                var fr = new FileReader();
+                fr.readAsDataURL(image);
+                fr.onload = () => {
+                    $.ajax({
+                        type: "PUT",
+                        url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/contents/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/${filename}.${extension}`,
+                        data: JSON.stringify({
+                            "message": `Push image ${filename}.${extension}`,
+                            "content":  fr.result.split(',').slice(-1)[0]
+                        }),
+                        headers: headers,
+                        success: function (response) {
+                            console.log(response);
+                            saveFile(headers, filename, editor.data.get());
+                        }
+                    });
+                };
+            }
+            else {
+                saveFile(headers, filename, editor.data.get());
+            }
 
         });
     } )
