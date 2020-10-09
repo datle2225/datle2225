@@ -1,3 +1,9 @@
+@import "./common.css";
+
+div.main {
+    padding: 40px 20px
+}
+
 form.editor {
     display: flex;
     flex-direction: column;
@@ -31,4 +37,32 @@ form.editor label.submit {
 form.editor label.submit:hover {
     color: white;
     background-color: green;
+}
+
+[type="file"] {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
+[type="file"] + label {
+    background: #76B0DA;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+    font-size: inherit;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem 50px;
+    position: relative;
+    transition: all 0.3s;
+    vertical-align: middle;
+}
+
+[type="file"] + label:hover {
+    background-color: #3e9bdd;
 }

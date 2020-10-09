@@ -8,32 +8,44 @@
     <link rel="stylesheet" href="assets/css/ckeditor.css">
 </head>
 <body>
-    <form class="editor" enctype="multipart/form-data">
-        <label for="title">
-            Tên bài viết: <input type="text" name="title" id="title"/>
-        </label>
-        <label for="image">
-            Ảnh bài viết: <input type="file" name="image" id="image" accept="image/*"/>
-        </label>
-        <h1>Hôm nay vợ muốn viết gì ạ?</h1>
+    <header></header>
 
-        <div class="editor">
-            <!-- The toolbar will be rendered in this container. -->
-            <div id="toolbar-container"></div>
-    
-            <!-- This container will become the editable. -->
-            <div id="editor">
-                <p>Hãy viết gì đó vào đây thử xem... ngao~(=^.^=)</p>
+    <section class="body">
+        <div class="body">
+            <div class="main">
+                <form class="editor" enctype="multipart/form-data">
+                    <label for="title">
+                        Tên bài viết: <input type="text" name="title" id="title"/>
+                    </label>
+                    <label for="image">
+                        <input type="file" name="image" id="image" accept="image/*"/>
+                        <label for="file">Ảnh bài viết</label>
+                    </label>
+                    <h1>Hôm nay vợ muốn viết gì ạ?</h1>
+            
+                    <div class="editor">
+                        <!-- The toolbar will be rendered in this container. -->
+                        <div id="toolbar-container"></div>
+                
+                        <!-- This container will become the editable. -->
+                        <div id="editor">
+                            <p>Hãy viết gì đó vào đây thử xem... ngao~(=^.^=)</p>
+                        </div>
+                    </div>
+            
+                    <input type="submit" id="submit">
+                    <label class="submit" for="submit">Lưu lại</label>
+                </form>
             </div>
         </div>
+    </section>
 
-        <input type="submit" id="submit">
-        <label class="submit" for="submit">Lưu lại</label>
-
-    </form>
+    <footer></footer>
 
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/constants.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/footer.js"></script>
     <script src="assets/js/ckeditor.js"></script>
 </body>
 </html>

@@ -30,6 +30,7 @@ div.header>nav a {
 }
 
 div.header>nav a .logo {
+    box-sizing: border-box;
     padding: 10px 0;
     height: 100%;
 }
