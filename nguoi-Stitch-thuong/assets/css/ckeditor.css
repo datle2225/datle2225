@@ -8,7 +8,7 @@ section.body {
 }
 
 section.body div.body {
-    max-width: 1265px;
+    width: 1265px;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@ section.body div.body div.main {
     border-radius: 10px;
     line-height: 19px;
     flex-grow: 1;
-    min-width: 411px;
+    width: 411px;
     padding: 40px 20px
 }
 
@@ -64,32 +64,44 @@ form.editor label.submit:hover {
     padding: 5px 10px;
     border: 2px solid grey;
     border-radius: 5px;
+    font-family: NunitoSemiBold;
 }
 
 [type="file"] {
-    height: 0;
-    overflow: hidden;
-    width: 0;
+    display: none;
 }
 
 [type="file"] + label {
     background: #76B0DA;
     border: none;
     border-radius: 5px;
-    color: #fff;
+    color: white;
     cursor: pointer;
-    display: inline-block;
-    font-family: 'Rubik', sans-serif;
-    font-size: inherit;
-    font-weight: 500;
-    margin-bottom: 1rem;
+    display: block;
     outline: none;
-    padding: 1rem 50px;
+    padding: 10px 20px;
     position: relative;
     transition: all 0.3s;
-    vertical-align: middle;
+
+    max-width: 180px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 [type="file"] + label:hover {
     background-color: #3e9bdd;
+}
+
+
+@media (max-width: 492px) {
+    section.body div.body {
+        width: 100%;
+    }
+    section.body div.body div.main {
+        min-width: unset;
+        width: 100%;
+        box-sizing: border-box;
+    }
 }

@@ -138,4 +138,12 @@ DecoupledEditor
     } );
 
 $("#image").on('change', function() {
+    image = $("#image")[0].files[0];
+    console.log($("#imageLabel"))
+    if (image) {
+        $("#imageLabel").text(image.name);
+    }
+    else {
+        $("#imageLabel").text('Ảnh bài viết');
+    }
 })

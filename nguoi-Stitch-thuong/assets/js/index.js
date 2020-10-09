@@ -103,12 +103,13 @@ function genArticles() {
     
             var title = UTILS.toFirstLetterUpperCase(info.slice(1).join(' ').slice(0, -5));
     
-            var imageName = `${article.path.slice(0, -5)}.png`;
-            if (images.includes(imageName)) {
+            var imageName = article.path.slice(0, -5);
+            image = images.filter(i => i.includes(imageName));
+            if (image.length) {
                 articles += `
                     <div class="article">
                         <a href='article.html?article=${article.path}'>
-                            <img src="https://${CONSTANT.REPO}/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/${imageName}" alt="article-image"/>
+                            <img src="https://${CONSTANT.REPO}/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/${image[0]}" alt="article-image"/>
                         </a>
                         <div class="info">
                             <a href='article.html?article=${article.path}'>${title}</a>
