@@ -39,6 +39,12 @@ form.editor label.submit:hover {
     background-color: green;
 }
 
+[type="text"] {
+    padding: 5px 10px;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
 [type="file"] {
     height: 0;
     overflow: hidden;

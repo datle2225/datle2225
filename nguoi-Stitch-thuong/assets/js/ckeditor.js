@@ -137,4 +137,5 @@ DecoupledEditor
         console.error( error );
     } );
 
-
+$("#image").on('change', function() {
+})
