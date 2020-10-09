@@ -61,6 +61,7 @@ section.body div.body div.main {
 
 #articles div.article img {
     max-height: 120px;
+    max-width: 200px;
     border-radius: 10px;
 }
 
@@ -177,6 +178,11 @@ section.body div.body div.main div.pagination label.pagination-button input {
 
     #articles div.article div.info {
         align-items: center;
+    }
+
+    #articles div.article div.info a,
+    #articles div.article div.info p {
+        text-align: center;
     }
 
     section.body div.body div.sub {
