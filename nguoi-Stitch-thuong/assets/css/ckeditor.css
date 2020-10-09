@@ -1,6 +1,26 @@
 @import "./common.css";
 
-div.main {
+section.body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+}
+
+section.body div.body {
+    max-width: 1265px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+section.body div.body div.main {
+    background-color: white;
+    border-radius: 10px;
+    line-height: 19px;
+    flex-grow: 1;
+    min-width: 411px;
     padding: 40px 20px
 }
 
@@ -17,6 +37,7 @@ form.editor div.editor {
     padding: 10px;
     background-color: #d2d2d2;
     margin-bottom: 12px;
+    width: 90%;
 }
 
 #editor {
