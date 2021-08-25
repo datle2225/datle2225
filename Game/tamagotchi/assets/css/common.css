@@ -1,0 +1,75 @@
+@import "./modify.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #ECECEC;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                            supported by Chrome and Opera */
+}
+
+nav {
+    background-color: white;
+    max-height: 129px;
+}
+
+.row {
+    --bs-gutter-x: 0 !important;
+}
+
+.select:hover img:first-child {
+    display: none;
+}
+
+.select:hover img:last-child {
+    display: block !important;
+}
+
+.status-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #0058FD;
+}
+
+.status-circle.red {
+    background-color: #F13E4B;
+}
+
+.status-circle.green {
+    background-color: #5AB37E;
+}
+
+@media (max-width: 1023px) {
+    nav {
+        max-height: 70px;
+    }
+
+    .status-circle {
+        width: 25px;
+        height: 25px;
+    }
+}

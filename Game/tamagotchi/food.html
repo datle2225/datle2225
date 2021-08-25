@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/logo/favicon.icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi - Food</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css">
+
+    <link rel="stylesheet" href="assets/css/food.css">
+
+</head>
+
+<body>
+    <div class="d-flex flex-column h-100 mw-100">
+        <nav class="py-4 mw-100 row m-0" aria-label="Site menu">
+            <a class="menu select col d-flex justify-content-center align-items-center nes-pointer p-0 mx-5 _mx-sm-5 d-block mh-100" href="index.html" title="food">
+                <img src="assets/images/menu-food-active.png" alt="menu-food-active" class="mw-100 mh-100">
+            </a>
+            <div class="menu select col d-flex justify-content-center align-items-center nes-pointer p-0 mx-5 _mx-sm-5 mh-100" title="train">
+                <img src="assets/images/menu-train-default.png" alt="menu-train-default" class="mw-100 mh-100">
+                <img src="assets/images/menu-train-active.png" alt="menu-train-active" class="mw-100 mh-100 d-none">
+            </div>
+            <div class="menu select col d-flex justify-content-center align-items-center nes-pointer p-0 mx-5 _mx-sm-5 mh-100" title="connect">
+                <img src="assets/images/menu-connect-default.png" alt="menu-connect-default" class="mw-100 mh-100">
+                <img src="assets/images/menu-connect-active.png" alt="menu-connect-active" class="mw-100 mh-100 d-none">
+            </div>
+            <div class="menu select col d-flex justify-content-center align-items-center nes-pointer p-0 mx-5 _mx-sm-5 mh-100" title="bath">
+                <img src="assets/images/menu-bath-default.png" alt="menu-connect-default" class="mw-100 mh-100">
+                <img src="assets/images/menu-bath-active.png" alt="menu-connect-active" class="mw-100 mh-100 d-none">
+            </div>
+            <div class="menu select col d-flex justify-content-center align-items-center nes-pointer p-0 mx-5 _mx-sm-5 mh-100" title="toilet">
+                <img src="assets/images/menu-toilet-default.png" alt="menu-bath-default" class="mw-100 mh-100">
+                <img src="assets/images/menu-toilet-active.png" alt="menu-bath-active" class="mw-100 mh-100 d-none">
+            </div>
+        </nav>
+
+        <div class="flex-grow-1 mx-5 my-2 _mx-sm-5 h-50" id="options">
+        </div>
+    
+        <nav class="py-4 mw-100 row m-0" aria-label="Site menu">
+            <div class="menu select col d-flex justify-content-center align-items-center nes-pointer p-0 mx-5 _mx-sm-5 mh-100" title="scale">
+                <img src="assets/images/menu-scale-default.png" alt="menu-scale-default" class="mw-100 mh-100">
+                <img src="assets/images/menu-scale-active.png" alt="menu-scale-active" class="mw-100 mh-100 d-none">
+            </div>
+            <div class="menu select col d-flex justify-content-center align-items-center nes-pointer p-0 mx-5 _mx-sm-5 mh-100" title="medicine">
+                <img src="assets/images/menu-medicine-default.png" alt="menu-medicine-default" class="mw-100 mh-100">
+                <img src="assets/images/menu-medicine-active.png" alt="menu-medicine-active" class="mw-100 mh-100 d-none">
+            </div>
+            <div class="menu select col d-flex justify-content-center align-items-center nes-pointer p-0 mx-5 _mx-sm-5 mh-100" title="bed">
+                <img src="assets/images/menu-bed-default.png" alt="menu-bed-default" class="mw-100 mh-100">
+                <img src="assets/images/menu-bed-active.png" alt="menu-bed-active" class="mw-100 mh-100 d-none">
+            </div>
+            <div class="menu select col d-flex justify-content-center align-items-center p-0 mx-5 _mx-sm-5 mh-100" title="status">
+                <div class="status-circle"></div>
+            </div>
+            <div class="menu select col d-flex justify-content-center align-items-center nes-pointer p-0 mx-5 _mx-sm-5 mh-100" title="more">
+                <img src="assets/images/menu-logo-default.png" alt="menu-logo-default" class="mw-100 mh-100">
+                <img src="assets/images/menu-logo-active.png" alt="menu-logo-active" class="mw-100 mh-100 d-none">
+            </div>
+        </nav>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/food.js"></script>
+</body>
+
+</html>
