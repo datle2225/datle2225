@@ -8,15 +8,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/favicon-16x16.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamagotchi - Food</title>
+    <title>Tamagotchi - Train</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/common.css">
-
-    <link rel="stylesheet" href="assets/css/train-skillful.css">
+    <link rel="stylesheet" href="assets/css/train-intelligence.css">
 
 </head>
 
@@ -44,9 +43,52 @@
             </div>
         </nav>
 
-        <div class="flex-grow-1 mx-5 my-2 _mx-sm-5 h-50" id="game">
+        <div class="flex-grow-1 mx-5 my-2 _mx-sm-5 h-50 d-flex flex-wrap-reverse justify-content-center align-items-center" id="game">
+            <div class="game-container">
+                <div class="game-message">
+                    <p></p>
+                    <div class="lower">
+                        <a class="keep-playing-button">Keep going</a>
+                        <a class="retry-button">Try again</a>
+                    </div>
+                </div>
+
+                <div class="grid-container">
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+
+                <div class="tile-container">
+
+                </div>
+            </div>
+            <div class="scores-container">
+                <div class="score-container">0</div>
+            </div>
         </div>
-    
+
         <nav class="py-4 mw-100 row m-0" aria-label="Site menu">
             <div class="menu select col d-flex justify-content-center align-items-center nes-pointer p-0 mx-5 _mx-sm-5 mh-100" title="scale">
                 <img src="assets/images/menu-scale-default.png" alt="menu-scale-default" class="mw-100 mh-100">
@@ -72,7 +114,15 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/common.js"></script>
-    <script src="assets/js/train-skillful.js"></script>
+    <script src="assets/js/bind_polyfill.js"></script>
+    <script src="assets/js/classlist_polyfill.js"></script>
+    <script src="assets/js/animframe_polyfill.js"></script>
+    <script src="assets/js/keyboard_input_manager.js"></script>
+    <script src="assets/js/train-intelligence_html_actuator.js"></script>
+    <script src="assets/js/train-intelligence_grid.js"></script>
+    <script src="assets/js/train-intelligence_tile.js"></script>
+    <script src="assets/js/train-intelligence_game_manager.js"></script>
+    <script src="assets/js/train-intelligence.js"></script>
 </body>
 
 </html>
