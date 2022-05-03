@@ -1,0 +1,36 @@
+section.body div.question_number {
+    font-family: "NunitoExtraBold";
+}
+
+section.body div.answer {
+    padding-bottom: 10px;
+}
+
+section.body div.answer label {
+    cursor: pointer;
+}
+
+section.body div.question_content div.question_review {
+    gap: 20px;
+    cursor: pointer;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+}
+
+section.body div.question_content div.question_review:hover {
+    background-color: #3366FF;
+    color: white;
+}
+
+section.body div.question_content div.question_review div.number {
+    min-width: 150px;
+}
+
+section.body div.question_content div.question_review div.flag {
+    min-width: 50px;
+}
+
+section.body div.answers_content div.exam_config input[type="number"] {
+    max-width: 55px;
+}
