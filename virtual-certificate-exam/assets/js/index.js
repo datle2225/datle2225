@@ -64,7 +64,7 @@ enterExam = () => {
             }
 
             if ($("input[name='exam_timer']:checked").length) {
-                countDown($("input[name='exam_time_limit']").val() ? $("input[name='exam_time_limit']").val() : 60, $('#clock'));
+                countDown($("input[name='exam_time_limit']").val() ? $("input[name='exam_time_limit']").val()*60 : 60*60, $('#clock'));
             }
             
             $(".show_answer").show();
@@ -227,6 +227,7 @@ countDown = (duration, $element) => {
         $element.text(hours + ":" + minutes + ":" + seconds);
         if (--timer < 0) {
             clearInterval(countdownInterval);
+            endExam();
             $('#timeout').modal('show');
             $element.text("00:00:00");
         }
