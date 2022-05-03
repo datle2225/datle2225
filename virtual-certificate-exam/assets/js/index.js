@@ -10,6 +10,7 @@ let questions_content = [];
 let answers = {};
 let flags = [];
 let is_submitted = false;
+let countdownInterval;
 
 if (!TOKEN) {
     USERNAME = window.prompt("USERNAME: ");
@@ -222,7 +223,7 @@ countDown = (duration, $element) => {
     [hours, minutes, seconds] = findTime(timer);
     $element.text(hours + ":" + minutes + ":" + seconds);
 
-    let countdownInterval = setInterval(function () {
+    countdownInterval = setInterval(function () {
         [hours, minutes, seconds] = findTime(timer-1);
         $element.text(hours + ":" + minutes + ":" + seconds);
         if (--timer < 0) {
@@ -347,7 +348,9 @@ endExam = () => {
     $("#retake").click(() => {
         enterExam();
     });
-    
+    if (countdownInterval) {
+        clearInterval(countdownInterval);
+    }
     is_submitted = true;
 }
 
