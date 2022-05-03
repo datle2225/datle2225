@@ -381,6 +381,7 @@ anwsersGenerate = (number, is_show_answer) => {
 
 regen = () => {
     $("#show_answer").click(() => {
+        getAnswer();
         anwsersGenerate(current_tab-1, true);
     });
 
