@@ -62,6 +62,11 @@ enterExam = () => {
                     questions_content = dump.content.slice(0, max);
                     break;
             }
+
+            if ($("input[name='exam_timer']:checked").length) {
+                countDown($("input[name='exam_time_limit']").val() ? $("input[name='exam_time_limit']").val() : 60, $('#clock'));
+            }
+            
             $(".show_answer").show();
             $(".flag").show();
             $(".submit").show();
@@ -102,7 +107,7 @@ enterExam = () => {
                 </div>
                 <div>
                     <label>
-                        Thời gian làm bài: <input type="number" name="exam_time_limit"> phút
+                        Thời gian làm bài: <input type="number" name="exam_time_limit" min='1' value='60'> phút
                     </label>
                 </div>
             </div>
