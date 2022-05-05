@@ -1,0 +1,112 @@
+@import './common.css';
+
+footer {
+    background-color: #393E46;
+    height: 70px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+}
+
+footer div.hr {
+    border: 1px solid white;
+    height: 50px;
+}
+
+footer div.questions {
+    flex-grow: 1;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    overflow-x: auto;
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+footer div.questions::-webkit-scrollbar {
+    display: none;
+}
+  
+footer div.questions div.question {
+    border-radius: 50px;
+    background: white;
+    height: 40px;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+  
+footer div.questions div.start,
+footer div.questions div.end  {
+    border-radius: 0;
+    background: white;
+    height: 40px;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+footer div.questions div.end {
+    cursor: pointer;
+}
+  
+footer div.questions > div.active,
+footer div.questions > div.active.flag {
+    border: 5px solid #3366FF;
+    color: #3366FF;
+}
+  
+footer div.questions > div.done {
+    background: #3366FF;
+    color: white !important;
+}
+  
+footer div.questions > div.flag {
+    border: 3px solid #FFC000;
+    color: inherit;
+}
+  
+footer div.questions > div.done.flag {
+    border: 3px solid #FFC000;
+}
+
+footer div button {
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-family: "NunitoExtraBold";
+    cursor: pointer;
+}
+
+footer div.flag button {
+    background: #FFC000;
+}
+
+footer div.submit button {
+    background: #3366FF;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    footer div.hr {
+        display: none;
+    }
+    footer div.questions {
+        border-top: 1px solid white;
+        flex: 1 0 100%;
+        order: 1;
+        padding-top: 16px;
+    }
+}

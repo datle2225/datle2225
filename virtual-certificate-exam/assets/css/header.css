@@ -1,0 +1,61 @@
+section.header {
+    width: 100%;
+    background-color: #393E46;
+}
+
+header {
+    background-color: #393E46;
+    font-size: 2rem;
+    color: white;
+}
+
+header div.logo, header div.clock {
+    width: 100px;
+    text-align: center;
+}
+
+header div.logo img {
+    max-height: 70px;
+}
+
+header .page-name {
+    flex-grow: 1;
+    text-align: center;
+    font-family: "NunitoExtraBold";
+    font-size: 2rem;
+}
+
+div.modal-content {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    max-width: 447px;
+}
+
+div.modal-content div.modal-dismiss {
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+div.modal-content div.modal-title {
+    font-family: "NunitoExtraBold";
+    font-size: 2.4rem;
+    margin: 16px 0 23px;
+}
+
+div.modal-content div.modal-body {
+    align-self: center;
+    text-align: center;
+    line-height: 29px;
+    margin-bottom: 32px;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    header .page-name {
+        max-width: 50%;
+    }
+    header div.logo, header div.clock {
+        flex-grow: 2;
+    }
+}
