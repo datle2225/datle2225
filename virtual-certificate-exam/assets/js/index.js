@@ -17,6 +17,25 @@ if (!TOKEN) {
     TOKEN = window.prompt("TOKEN: ");
 }
 
+shuffle = array => {
+    let currentIndex = array.length,  randomIndex;
+    let newArray = [...array];
+  
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [newArray[currentIndex], newArray[randomIndex]] = [
+        newArray[randomIndex], newArray[currentIndex]];
+    }
+  
+    return newArray;
+}
+
 enterExam = () => {
     current_tab = 0;
     questions_content = [];
@@ -63,11 +82,20 @@ enterExam = () => {
                     questions_content = dump.content.slice(0, max);
                     break;
             }
-
             if ($("input[name='exam_timer']:checked").length) {
                 countDown($("input[name='exam_time_limit']").val() ? $("input[name='exam_time_limit']").val()*60 : 60*60, $('#clock'));
             }
-            
+
+            if ($("input[name='random_question']:checked").length) {
+                questions_content = shuffle(questions_content);
+            }
+
+            if ($("input[name='random_answer']:checked").length) {
+                questions_content.forEach(question => {
+                    question.answers_content = shuffle(question.answers_content);
+                });
+            }
+
             $(".show_answer").show();
             $(".flag").show();
             $(".submit").show();
@@ -102,13 +130,27 @@ enterExam = () => {
             <div class="exam_config d-flex" style="gap: 20px; flex-wrap: wrap; margin-top: 20px;">
                 <div>
                     <label>
-                        <input type="checkbox" name="exam_timer" checked>
+                        <input type="checkbox" name="exam_timer">
                         Tính giờ?
                     </label>
                 </div>
                 <div>
                     <label>
                         Thời gian làm bài: <input type="number" name="exam_time_limit" min='1' value='60'> phút
+                    </label>
+                </div>
+            </div>
+            <div class="exam_config d-flex" style="gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+                <div>
+                    <label>
+                        <input type="checkbox" name="random_question">
+                        Đảo câu hỏi?
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="random_answer">
+                        Đảo câu trả lời?
                     </label>
                 </div>
             </div>
@@ -139,9 +181,13 @@ goToExam = url => {
         //     "content": "",
         //     "encoding": ""
         // }
+
         dump = JSON.parse(atob(data.content));
         enterExam();
     });
+
+    dump = JSON.parse(atob(data.content));
+    enterExam();
 
 };
 
@@ -179,7 +225,7 @@ chooseExam = () => {
         //     ],
         //     "truncated": false
         // }
-        
+
         $('.question_number').text('List exam');
         $('.answers_content').text('');
         $('.explain_content').text('');
@@ -197,6 +243,23 @@ chooseExam = () => {
 
         $('.question_content').html(exams);
     });
+        
+    $('.question_number').text('List exam');
+    $('.answers_content').text('');
+    $('.explain_content').text('');
+
+    let exams = '';
+    data.tree.forEach((exam, index) => {
+        exams += `
+            <div class="question_review" onclick="goToExam('${exam.url}')">
+                <div class="number">
+                    ${exam.path}
+                </div>
+            </div>
+        `
+    });
+
+    $('.question_content').html(exams);
 }
 
 findTime = timer => {
@@ -346,6 +409,7 @@ endExam = () => {
         <button id="retake">Retake</button>
     `);
     $("#retake").click(() => {
+        $('.explain_content').text('');
         enterExam();
     });
     if (countdownInterval) {
