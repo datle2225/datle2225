@@ -96,6 +96,9 @@ enterExam = () => {
                 });
             }
 
+            // Reset keypress
+            $(document).unbind("keypress");
+
             $(".show_answer").show();
             $(".flag").show();
             $(".submit").show();
@@ -417,10 +420,7 @@ endExam = () => {
         <button id="retake">Retake</button>
     `);
     $("#retake").click(() => {
-        $('.explain_content').text('');
-        // Reset keypress
-        $(document).removeAttr("keypress");
-        
+        $('.explain_content').text('');        
         enterExam();
 
     });
