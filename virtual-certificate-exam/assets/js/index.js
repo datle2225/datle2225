@@ -55,7 +55,7 @@ enterExam = () => {
             </div>
         `;
         $(".questions").html(questions);
-    
+
         $("#start_exam").click(() => {
             let exam_config = $("input[name='exam_config']:checked").val();
             let max = dump.content.length;
@@ -102,6 +102,14 @@ enterExam = () => {
             $(".start_exam").hide();
             startExam();
         });
+
+        // On Enter press
+        $(document).on('keypress',function(e) {
+            if(e.which == 13) {
+                $("#start_exam").trigger( "click" );
+            }
+        });
+
     });
 
     if (!current_tab) {
