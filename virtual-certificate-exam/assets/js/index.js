@@ -106,7 +106,7 @@ enterExam = () => {
         // On Enter press
         $(document).on('keypress',function(e) {
             if(e.which == 13) {
-                $("#start_exam").trigger( "click" );
+                $("#start_exam").trigger("click");
             }
         });
 
@@ -418,7 +418,11 @@ endExam = () => {
     `);
     $("#retake").click(() => {
         $('.explain_content').text('');
+        // Reset keypress
+        $(document).removeAttr("keypress");
+        
         enterExam();
+
     });
     if (countdownInterval) {
         clearInterval(countdownInterval);
