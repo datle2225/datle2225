@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    function GetURLParameter(sParam)
+    {
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++) 
+        {
+            var sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] == sParam) 
+            {
+                return sParameterName[1];
+            }
+        }
+    }
+
+    let code = "code=" + GetURLParameter("code");
+    let error = "error=" + GetURLParameter("error");
+    let state = "state=" + GetURLParameter("state");
+
+    let url_redirect = `http://10.1.43.211:3000/user-login?${code}&${error}&${state}`
+    ​
+    window.location.href = url_redirect;
+</script>
+
+</html>
